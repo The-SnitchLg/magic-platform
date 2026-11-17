@@ -175,6 +175,13 @@ CREATE POLICY "agreements_update_participants" ON public.agreement_versions
     -- Tutor can update when submitted to review/approve
     OR (public.is_tutor_of_project(project_id) AND status = 'submitted')
     OR public.is_admin()
+  )
+  WITH CHECK (
+    -- Student can transition to draft or submitted
+    (public.is_student_of_project(project_id) AND status IN ('draft', 'submitted'))
+    -- Tutor can transition to changes_requested or approved
+    OR (public.is_tutor_of_project(project_id) AND status IN ('submitted', 'changes_requested', 'approved'))
+    OR public.is_admin()
   );
 
 -- ------------------------------------------------------------------------------
