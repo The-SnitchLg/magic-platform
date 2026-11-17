@@ -1,0 +1,36 @@
+name: Quality & Security Gate
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  verify:
+    name: Lint, Test, Scan & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun Runtime
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install Dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Scan Secrets & Credential Leakage
+        run: bun run scan:secrets
+
+      - name: Typecheck TypeScript
+        run: bun run lint
+
+      - name: Execute Automated Unit Tests
+        run: bun run test
+
+      - name: Compile Production Bundle
+        run: bun run build

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#151311;color:#e7e1de;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#e7e1de","inverse-surface":"#e7e1de","error":"#ffb4ab","surface":"#151311","on-tertiary-fixed-variant":"#5d4200","on-secondary":"#073820","on-primary":"#5e1600","secondary-fixed-dim":"#a1d2af","inverse-primary":"#9d4225","inverse-on-surface":"#32302e","background":"#151311","outline":"#a48b84","on-primary-fixed-variant":"#7e2b10","surface-dim":"#151311","surface-container-highest":"#373432","outline-variant":"#56423d","on-secondary-container":"#93c3a2","on-primary-container":"#531200","tertiary-fixed-dim":"#eec067","surface-container-low":"#1d1b19","surface-variant":"#373432","on-surface-variant":"#dcc1b9","on-tertiary":"#412d00","on-secondary-fixed-variant":"#224f35","primary-fixed":"#ffdbd1","secondary-fixed":"#bceecb","primary-container":"#dd7252","surface-container-high":"#2c2a27","primary-fixed-dim":"#ffb59f","surface-container":"#211f1d","surface-bright":"#3b3936","on-tertiary-container":"#382700","surface-tint":"#ffb59f","on-surface":"#e7e1de","on-tertiary-fixed":"#261900","tertiary":"#eec067","error-container":"#93000a","tertiary-container":"#b38a37","tertiary-fixed":"#ffdea4","secondary-container":"#255237","on-secondary-fixed":"#002110","surface-container-lowest":"#100e0c","secondary":"#a1d2af","on-error":"#690005","primary":"#ffb59f","on-error-container":"#ffdad6","on-primary-fixed":"#3a0a00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","margin-mobile":"1.25rem","margin":"3rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2.5rem"},fontFamily:{"label-md":["Manrope"],"headline-md":["Newsreader"],"body-lg":["Newsreader"],"title-sm":["Manrope"],"body-md":["Manrope"],"headline-lg-mobile":["Newsreader"],"headline-sm":["Newsreader"],"body-sm":["Manrope"],"headline-xl-mobile":["Newsreader"],"headline-lg":["Newsreader"],"headline-xl":["Newsreader"],"title-md":["Manrope"],"label-sm":["Manrope"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"30px","fontWeight":"400"}],"title-sm":["15px",{"lineHeight":"22px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="text-primary font-headline-sm text-headline-sm italic leading-none">Posgrados &amp; Inv.</span><span class="text-outline/40 text-[10px]">•</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant/80 truncate">Plataforma Académica</span></div><div class="flex items-center gap-space-xs mt-0.5"><button class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors py-0.5 max-w-[200px]"><span class="font-label-md text-label-md text-secondary truncate">Cohorte 2024-II · Doctorado</span><span class="material-symbols-outlined text-[14px] text-secondary">expand_more</span></button></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificaciones académicas" class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-10 space-y-space-lg">
+<!-- Encabezado Editorial y Acciones Rápidas -->
+<section class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Monitoreo y Decanatura</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Cód. C07-C08</span>
+</div>
+<div class="space-y-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Observatorio de Rendimiento Investigativo</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cohorte Posgrados 2026-I · Cátedra de Tesis Doctoral</p>
+</div>
+<!-- Controles de Período y Exportación -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="relative flex-1">
+<select class="w-full bg-surface-container text-on-surface font-label-md text-label-md py-2.5 pl-3 pr-8 rounded-lg appearance-none focus:outline-none transition-colors" id="period-selector">
+<option selected="" value="2026-1">Período Activo: Semestre 2026-I</option>
+<option value="2025-2">Corte Consolidado: 2025-II</option>
+<option value="2025-1">Archivo Histórico: 2025-I</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-[18px]">unfold_more</span>
+</div>
+<button class="flex items-center justify-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface py-2.5 px-3 rounded-lg font-label-md text-label-md shrink-0 shadow-sm transition-all active:scale-[0.98]" id="btn-export-report">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span>Acta PDF</span>
+</button>
+</div>
+</section>
+<!-- Grid de 4 KPIs Compactos -->
+<section class="grid grid-cols-2 gap-space-sm">
+<!-- KPI 1 -->
+<div class="bg-surface-container p-3.5 rounded-xl shadow-sm flex flex-col justify-between space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Población Activa</span>
+<span class="material-symbols-outlined text-[16px] text-primary">groups</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium leading-none">15 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">tesistas</span></div>
+<p class="font-label-sm text-[10px] text-error mt-1 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">crisis_alert</span>
+          3 en alerta de ritmo
+        </p>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container p-3.5 rounded-xl shadow-sm flex flex-col justify-between space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cumplimiento Acuerdos</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium leading-none">84%</div>
+<p class="font-label-sm text-[10px] text-secondary mt-1 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">trending_up</span>
+          +4.2% vs ciclo anterior
+        </p>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container p-3.5 rounded-xl shadow-sm flex flex-col justify-between space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avales Expedidos</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">draw</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium leading-none">18 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">firmados</span></div>
+<p class="font-label-sm text-[10px] text-on-surface-variant mt-1 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-tertiary">pending</span>
+          5 en despacho
+        </p>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container p-3.5 rounded-xl shadow-sm flex flex-col justify-between space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Respuesta Docente</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">history_edu</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium leading-none">4.2 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">días prom.</span></div>
+<p class="font-label-sm text-[10px] text-secondary mt-1 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">check_circle</span>
+          Bajo meta (&lt;5 días)
+        </p>
+</div>
+</div>
+</section>
+<!-- Bandeja de Decisiones Prioritarias -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">task_alt</span>
+<h2 class="font-title-sm text-title-sm text-on-surface">Bandeja de Decisiones Prioritarias</h2>
+</div>
+<span class="bg-surface-container-high px-2 py-0.5 rounded-full font-label-sm text-[10px] text-primary">3 Asuntos</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Asunto 1 -->
+<div class="bg-surface-container p-4 rounded-xl shadow-sm space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-label-md text-label-md text-primary font-bold shrink-0">
+              SV
+            </div>
+<div class="min-w-0">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Sofía Valenzuela</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Revisión de muestreo metodológico</p>
+</div>
+</div>
+<span class="bg-tertiary-container/30 text-tertiary font-label-sm text-[10px] px-2 py-0.5 rounded uppercase tracking-wider shrink-0">Etapa 2</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+            Radicado hace 18h
+          </span>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md px-3.5 py-1.5 rounded shadow-sm transition-colors active:scale-95">
+            Revisar Muestreo
+          </button>
+</div>
+</div>
+<!-- Asunto 2 (Crítico / Terracota) -->
+<div class="bg-surface-container p-4 rounded-xl shadow-sm space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-label-md text-label-md text-secondary shrink-0">
+              CB
+            </div>
+<div class="min-w-0">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Camilo Benítez</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Capítulo III listo para aval institucional</p>
+</div>
+</div>
+<span class="bg-secondary-container/40 text-secondary-fixed-dim font-label-sm text-[10px] px-2 py-0.5 rounded uppercase tracking-wider shrink-0">Etapa 3</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>
+            Dictamen favorable del tutor
+          </span>
+<button class="bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-label-md text-label-md px-4 py-1.5 rounded font-semibold shadow-sm transition-colors active:scale-95">
+            Suscribir Aval
+          </button>
+</div>
+</div>
+<!-- Asunto 3 -->
+<div class="bg-surface-container p-4 rounded-xl shadow-sm space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-label-md text-label-md text-on-surface-variant shrink-0">
+              DS
+            </div>
+<div class="min-w-0">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Diego Saavedra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Comprobación bibliométrica Scopus/WoS</p>
+</div>
+</div>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] px-2 py-0.5 rounded uppercase tracking-wider shrink-0">Etapa 4</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">menu_book</span>
+            Indexación validada
+          </span>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md px-3.5 py-1.5 rounded shadow-sm transition-colors active:scale-95">
+            Habilitar Hito
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Tarjeta Clara: Distribución de Tesistas por Etapa -->
+<section class="bg-[#faf8f5] text-[#1e1c1a] p-5 rounded-xl shadow-xl space-y-4">
+<div class="flex items-center justify-between border-b border-[#1e1c1a]/10 pb-2.5">
+<div>
+<span class="font-label-sm text-[10px] uppercase tracking-widest text-[#1e1c1a]/60 font-semibold">Censo Metodológico</span>
+<h3 class="font-headline-sm text-headline-sm text-[#1e1c1a] leading-tight">Distribución por Etapa</h3>
+</div>
+<span class="bg-[#1e1c1a]/5 text-[#1e1c1a] font-label-md text-label-md px-2.5 py-1 rounded-full font-medium">15 Tesistas</span>
+</div>
+<div class="space-y-3 pt-1">
+<!-- E1 -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs font-label-md">
+<span class="text-[#1e1c1a]/80">E1 · Anteproyecto y Delimitación</span>
+<span class="font-semibold text-[#1e1c1a]">2 (13%)</span>
+</div>
+<div class="w-full h-2 bg-[#1e1c1a]/10 rounded-full overflow-hidden">
+<div class="h-full bg-[#c05c3d] rounded-full" style="width: 13.3%"></div>
+</div>
+</div>
+<!-- E2 -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs font-label-md">
+<span class="text-[#1e1c1a]/80">E2 · Marco Epistemológico &amp; Marco Teórico</span>
+<span class="font-semibold text-[#1e1c1a]">4 (27%)</span>
+</div>
+<div class="w-full h-2 bg-[#1e1c1a]/10 rounded-full overflow-hidden">
+<div class="h-full bg-[#c05c3d] rounded-full" style="width: 26.6%"></div>
+</div>
+</div>
+<!-- E3 -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs font-label-md">
+<span class="text-[#1e1c1a]/80">E3 · Trabajo de Campo y Recolección</span>
+<span class="font-semibold text-[#1e1c1a]">5 (33%)</span>
+</div>
+<div class="w-full h-2 bg-[#1e1c1a]/10 rounded-full overflow-hidden">
+<div class="h-full bg-[#2d5a3f] rounded-full" style="width: 33.3%"></div>
+</div>
+</div>
+<!-- E4 -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs font-label-md">
+<span class="text-[#1e1c1a]/80">E4 · Redacción y Artículos Monográficos</span>
+<span class="font-semibold text-[#1e1c1a]">3 (20%)</span>
+</div>
+<div class="w-full h-2 bg-[#1e1c1a]/10 rounded-full overflow-hidden">
+<div class="h-full bg-[#2d5a3f] rounded-full" style="width: 20%"></div>
+</div>
+</div>
+<!-- E5 -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs font-label-md">
+<span class="text-[#1e1c1a]/80">E5 · Disertación y Defensa Oral</span>
+<span class="font-semibold text-[#1e1c1a]">1 (7%)</span>
+</div>
+<div class="w-full h-2 bg-[#1e1c1a]/10 rounded-full overflow-hidden">
+<div class="h-full bg-[#c49a45] rounded-full" style="width: 6.8%"></div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-[11px] text-[#1e1c1a]/70 italic text-center pt-1">
+      Tasa de retención de cohorte en margen normativo: 91.8%
+    </p>
+</section>
+<!-- Tarjeta Clara: Semáforo de Gestión de Ritmo -->
+<section class="bg-[#faf8f5] text-[#1e1c1a] p-5 rounded-xl shadow-xl space-y-4">
+<div class="flex items-center justify-between border-b border-[#1e1c1a]/10 pb-2.5">
+<div>
+<span class="font-label-sm text-[10px] uppercase tracking-widest text-[#1e1c1a]/60 font-semibold">Control de Cronograma</span>
+<h3 class="font-headline-sm text-headline-sm text-[#1e1c1a] leading-tight">Semáforo de Gestión de Ritmo</h3>
+</div>
+<span class="material-symbols-outlined text-[#1e1c1a]/70 text-[20px]">traffic</span>
+</div>
+<!-- Indicadores -->
+<div class="space-y-2.5">
+<div class="flex items-center justify-between p-2.5 rounded bg-[#2d5a3f]/10">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#2d5a3f]"></div>
+<span class="font-label-md text-label-md text-[#1e1c1a] font-medium">Al día con el cronograma</span>
+</div>
+<span class="font-title-sm text-title-sm font-bold text-[#2d5a3f]">9 tesistas</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-[#c49a45]/15">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#c49a45]"></div>
+<span class="font-label-md text-label-md text-[#1e1c1a] font-medium">En revisión docente (&lt;15 días)</span>
+</div>
+<span class="font-title-sm text-title-sm font-bold text-[#8a6820]">3 tesistas</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-[#c05c3d]/15">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#c05c3d]"></div>
+<span class="font-label-md text-label-md text-[#1e1c1a] font-medium">Alerta de rezago (&gt;30 días sin entrega)</span>
+</div>
+<span class="font-title-sm text-title-sm font-bold text-[#ab5034]">3 tesistas</span>
+</div>
+</div>
+<!-- Acción Extraordinaria -->
+<button class="w-full bg-[#1e1c1a] hover:bg-[#2e2a27] text-[#faf8f5] py-2.5 px-4 rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 transition-all active:scale-[0.99] shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">calendar_clock</span>
+<span>Convocar Tutoría Extraordinaria</span>
+</button>
+</section>
+<!-- Tarjeta Oscura: Lista de Tesistas Activos -->
+<section class="bg-surface-container p-4 rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">badge</span>
+<h2 class="font-title-sm text-title-sm text-on-surface">Pórtico de Tesistas Activos</h2>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<div class="space-y-space-sm divide-y-0">
+<!-- Tesista 1 -->
+<div class="bg-surface-container-high/60 hover:bg-surface-container-high p-3.5 rounded-lg space-y-3 transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Retrato fotográfico académico sobrio en escala de grises de una investigadora de posgrado mirando concentrada hacia la cámara en biblioteca antigua." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9a_aU1VbZsv9ex1GAH50KgxBLTuupst3fdW2sjRgZ0agiVLRLX9TPhUPf-oTQ89J6UcKe3YudH00wyieVQBCMA6rMvOLqYM0VtPK7GIbYbvoMvfk0dThqzzmyMO2dw30K61nY68NzT07rZOTfWJ9rH0Be67Fijh370dwEP87wwkFg44yh_0xgn1z4klYRzk_jGh8HY-bp-tH22S8-39wzQu5megB6dhQOsyDZ"/>
+<div class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary"></div>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-sm text-title-sm text-on-surface truncate">Dra. (c) Sofía Valenzuela</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">Línea: Neurociencia Computacional</p>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-secondary font-semibold bg-secondary-container/40 px-2 py-0.5 rounded">Etapa 2</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Avance global del programa</span>
+<span class="text-on-surface font-semibold">42%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 42%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+            Último hito: 12 May
+          </span>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md px-3 py-1 rounded transition-colors active:scale-95">
+            Auditar Avance
+          </button>
+</div>
+</div>
+<!-- Tesista 2 -->
+<div class="bg-surface-container-high/60 hover:bg-surface-container-high p-3.5 rounded-lg space-y-3 transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Retrato académico formal en blanco y negro de investigador doctoral joven con lentes y traje oscuro en sala de archivo universitario." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdmIyLT3IHIerl4eta0KRnW7x6hviRwROdoooVaumL8mYNgwsKIo2wDs5I9h3kzludbCeG7F_734G4bQBJlSJ-4XS2nENeWLrRqgj71qa8IV1LDWRlKo75bJUrlL8ZW4o9K3j4odR82D_Yv2cgXdw5dcjPURiySSVC2fvfsnKhnMhTmX_cMeR-HGjsrPNZQ4gFcSOs-SRH8KgZLZ5MXN_T1lhBSl03AQx2ywyb"/>
+<div class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary"></div>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-sm text-title-sm text-on-surface truncate">Msc. Camilo Benítez</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">Línea: Políticas Públicas y Equidad</p>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-tertiary font-semibold bg-tertiary-container/30 px-2 py-0.5 rounded">Etapa 3</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Avance global del programa</span>
+<span class="text-on-surface font-semibold">68%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+            Dictamen Requerido
+          </span>
+<button class="bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-label-md text-label-md px-3 py-1 rounded font-semibold transition-colors active:scale-95">
+            Dictamen Prioritario
+          </button>
+</div>
+</div>
+<!-- Tesista 3 (Alerta Rezago) -->
+<div class="bg-surface-container-high/60 hover:bg-surface-container-high p-3.5 rounded-lg space-y-3 transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-primary font-title-sm text-title-sm font-bold flex items-center justify-center">
+                ML
+              </div>
+<div class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-error"></div>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-sm text-title-sm text-on-surface truncate">Msc. Mariana Lozano</h4>
+<p class="font-body-sm text-[12px] text-error truncate">34 días sin interacción de bitácora</p>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-error font-semibold bg-error-container/20 px-2 py-0.5 rounded">Etapa 1</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Avance global del programa</span>
+<span class="text-error font-semibold">18% (Detenido)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 18%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+            Alerta amarilla emitida
+          </span>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md px-3 py-1 rounded transition-colors active:scale-95">
+            Ver Ficha
+          </button>
+</div>
+</div>
+</div>
+<!-- Paginación y Cierre de Sección -->
+<div class="pt-2 flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant/80">
+<span>Mostrando 3 de 15 investigadores</span>
+<button class="text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-0.5">
+<span>Ver Cohorte Completa</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  (function () {
+    const exportBtn = document.getElementById('btn-export-report');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', function () {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>Generando...</span>';
+        this.classList.add('opacity-75');
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-secondary">check</span><span>Descargado</span>';
+          this.classList.remove('opacity-75');
+          setTimeout(() => {
+            this.innerHTML = originalText;
+          }, 2000);
+        }, 1200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.35)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="acuerdos" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">edit_document</span><span class="font-label-sm text-[10px] tracking-tight truncate">Acuerdos</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="ruta-academica" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">alt_route</span><span class="font-label-sm text-[10px] tracking-tight truncate">Ruta</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="mi-tesis" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">menu_book</span><span class="font-label-sm text-[10px] tracking-tight truncate">Mi Tesis</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 transition-colors group text-primary font-semibold" data-path="cohorte" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">groups</span><span class="font-label-sm text-[10px] tracking-tight truncate">Cohorte</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="perfil-investigador" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">person</span><span class="font-label-sm text-[10px] tracking-tight truncate">Perfil</span></a></div></nav></body></html>

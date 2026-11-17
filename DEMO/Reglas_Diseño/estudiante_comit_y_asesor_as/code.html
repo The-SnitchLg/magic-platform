@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#dd7252","tertiary-fixed-dim":"#eec067","on-primary":"#5e1600","secondary-container":"#255237","primary-fixed-dim":"#ffb59f","secondary-fixed":"#bceecb","on-tertiary-fixed-variant":"#5d4200","on-secondary-fixed":"#002110","surface-tint":"#ffb59f","on-secondary-fixed-variant":"#224f35","surface-container-lowest":"#100e0c","on-tertiary-container":"#382700","surface-container":"#211f1d","error":"#ffb4ab","on-secondary-container":"#93c3a2","surface-dim":"#151311","surface-container-low":"#1d1b19","tertiary-container":"#b38a37","on-error":"#690005","on-primary-fixed-variant":"#7e2b10","on-tertiary-fixed":"#261900","surface":"#151311","primary":"#ffb59f","background":"#151311","on-surface-variant":"#dcc1b9","tertiary":"#eec067","inverse-on-surface":"#32302e","on-primary-container":"#531200","on-error-container":"#ffdad6","secondary":"#a1d2af","on-surface":"#e7e1de","outline-variant":"#56423d","on-tertiary":"#412d00","inverse-surface":"#e7e1de","on-secondary":"#073820","secondary-fixed-dim":"#a1d2af","inverse-primary":"#9d4225","surface-variant":"#373432","on-primary-fixed":"#3a0a00","surface-container-high":"#2c2a27","on-background":"#e7e1de","surface-bright":"#3b3936","primary-fixed":"#ffdbd1","surface-container-highest":"#373432","outline":"#a48b84","error-container":"#93000a","tertiary-fixed":"#ffdea4"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","margin-mobile":"1.25rem","gutter":"1.5rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-md":"1rem","margin":"3rem","space-xs":"0.25rem"},"fontFamily":{"headline-xl":["Newsreader"],"title-md":["Manrope"],"headline-lg":["Newsreader"],"body-lg":["Newsreader"],"title-sm":["Manrope"],"headline-xl-mobile":["Newsreader"],"headline-md":["Newsreader"],"body-sm":["Manrope"],"label-md":["Manrope"],"body-md":["Manrope"],"headline-sm":["Newsreader"],"headline-lg-mobile":["Newsreader"],"label-sm":["Manrope"]},"fontSize":{"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"30px","fontWeight":"400"}],"title-sm":["15px",{"lineHeight":"22px","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between border-r border-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full overflow-hidden"><div class="px-space-lg pt-space-lg pb-space-md border-b border-surface-container flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[26px]">school</span><div><span class="font-headline-sm text-headline-sm text-on-surface block tracking-tight leading-none">Posgrados</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mt-space-xs">I+D Académica</span></div></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">v2.6</span></div><div class="overflow-y-auto flex-1 px-space-md py-space-md space-y-space-lg"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-space-xs">Estudiante</span><nav class="space-y-0.5" data-active-classes="bg-surface-container-high text-primary font-title-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="mis-acuerdos" href="#"><span class="material-symbols-outlined text-[18px]">handshake</span><span>Mis Acuerdos</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="mi-ruta-academica" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span><span>Mi Ruta Académica</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="tareas-y-entregas" href="#"><span class="material-symbols-outlined text-[18px]">task</span><span>Tareas y Entregas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="comite-y-asesorias" href="#"><span class="material-symbols-outlined text-[18px]">groups</span><span>Comité y Asesorías</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="bitacora-y-documentos" href="#"><span class="material-symbols-outlined text-[18px]">history_edu</span><span>Bitácora y Documentos</span></a></nav></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-space-xs">Tutor / Director</span><nav class="space-y-0.5" data-active-classes="bg-surface-container-high text-primary font-title-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="bandeja-de-decisiones-y-avales" href="#"><span class="material-symbols-outlined text-[18px]">assignment_turned_in</span><span>Bandeja de Decisiones y Avales</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="editor-de-ruta-por-tesista" href="#"><span class="material-symbols-outlined text-[18px]">timeline</span><span>Editor de Ruta por Tesista</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="expedientes-de-tesistas" href="#"><span class="material-symbols-outlined text-[18px]">folder_shared</span><span>Expedientes de Tesistas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="actas-y-dictamenes" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span>Actas y Dictámenes</span></a></nav></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-space-xs">Administración</span><nav class="space-y-0.5" data-active-classes="bg-surface-container-high text-primary font-title-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="panorama-de-cohorte-y-kpis" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Panorama de Cohorte y KPIs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="semaforo-de-riesgo-y-alertas" href="#"><span class="material-symbols-outlined text-[18px]">traffic</span><span>Semáforo de Riesgo y Alertas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="padron-de-investigadores-y-comites" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Padrón de Investigadores y Comités</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container hover:text-on-surface transition-all" data-path="catalogo-de-plantillas-y-rutas-canonicas" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Plantillas y Rutas Canónicas</span></a></nav></div></div></div><div class="p-space-md border-t border-surface-container bg-surface-container-low"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Red Doctoral Activa</span></div><button class="text-outline hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">help</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl border-b border-surface-container z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface transition-colors cursor-pointer">Posgrado</span><span class="text-outline">/</span><span class="text-on-surface">Seguimiento Académico</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/30 text-tertiary"><span class="material-symbols-outlined text-[15px]">calendar_month</span><span class="font-label-sm text-label-sm font-medium">Periodo Lectivo 2026-I</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded border border-surface-variant"><span class="material-symbols-outlined text-[16px] text-outline">account_balance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Facultad de Ciencias e Ingeniería</span></div><button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary"></span></button><div class="h-4 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden md:block"><span class="font-title-sm text-title-sm text-on-surface block leading-tight">Dra. Valeria Montes</span><span class="font-label-sm text-label-sm text-outline block">Comité Académico</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-space-md sm:px-space-lg lg:px-margin py-space-lg space-y-space-xl">
+<!-- CABECERA EDITORIAL DE ALTO IMPACTO -->
+<header class="relative w-full pt-space-md pb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-4xl">
+<div class="flex items-center gap-space-sm text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span>Folio Expediente #D-2024-884-BIO</span>
+<span class="text-surface-container-highest">|</span>
+<span class="text-tertiary">Semestre IV • Fase de Consolidación</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-none mt-space-xs">
+            Comité Tutorial, Asesorías y Dictámenes Periódicos
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic max-w-3xl pt-space-xs">
+            Proyecto Doctoral: “Determinismo epistemológico en modelos sintéticos celulares: Una ontología de la causalidad bioinformática contemporánea”
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-title-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">history_edu</span>
+<span>Reglamento Colegiado</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-title-sm text-title-sm shadow-sm hover:brightness-110 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Solicitar Reunión Extraordinaria</span>
+</button>
+</div>
+</div>
+<div class="mt-space-lg h-0.5 w-full bg-gradient-to-r from-primary-container via-surface-container-high to-transparent opacity-60"></div>
+</header>
+<!-- FICHA DEL ÓRGANO COLEGIADO TUTORIAL (3 INVESTIGADORES) -->
+<section class="space-y-space-md">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Estructura de Acompañamiento</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Integrantes del Órgano Colegiado</h2>
+</div>
+<span class="font-label-md text-label-md text-secondary hidden sm:inline-flex items-center gap-1.5 bg-secondary-container/40 px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+          Comité Ratificado por Consejo
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Director Principal -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between relative group hover:bg-surface-container transition-colors shadow-sm">
+<div class="absolute top- space-sm right-space-md pt-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed uppercase tracking-wider">Director Principal</span>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden bg-surface-container-highest shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Black and white portrait photography of an experienced senior male professor in his late fifties with round scholarly tortoiseshell spectacles, soft rim lighting, textured linen jacket, distinguished academic look with warm amber background shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBppufwOCRXQSjc_ZcfwhlM15fLbndDKT7gU3YEM96PbUd75Up7CEP85gs6eqtd_kJdlk67s00pTmFenNoJyfUWdCqvLWJCO9mXIGaWcSxUw9csFAqtsgOTaxTbiRN7O5w1Cd2VMm-UAdvDyA9T63T-8BJPjkZzCKAQ9-CA1ej9SybRJKdaIcC-0vtz5vEaf1OPgFr5GZRtH07aAfuH1NHFoeB0t-2Rw1ti6TrS"/>
+</div>
+<div class="min-w-0 pr-8">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. Aurelio Gutiérrez</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Centro de Investigaciones Filosóficas</p>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">UNAM • Nivel SNII III</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container-lowest/60 rounded-lg p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">fingerprint</span>
+                ORCID
+              </span>
+<a class="text-primary hover:underline font-label-md text-label-md" href="#">0000-0002-8392-1104</a>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">calendar_clock</span>
+                Reuniones suscritas
+              </span>
+<span class="text-on-surface font-title-sm text-title-sm">18 sesiones</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">approval</span>
+                Dictámenes emitidos
+              </span>
+<span class="text-secondary font-title-sm text-title-sm">4 Aprobatorios</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<a class="text-outline hover:text-on-surface flex items-center gap-1 font-body-sm text-body-sm transition-colors" href="mailto:aurelio.gutierrez@posgrado.unam.mx">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Contacto Institucional</span>
+</a>
+<button class="text-primary hover:text-primary-fixed text-label-md font-label-md uppercase tracking-wider flex items-center gap-0.5" type="button">
+<span>Bitácora</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Asesora Metodológica -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between relative group hover:bg-surface-container transition-colors shadow-sm">
+<div class="absolute top-space-sm right-space-md pt-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-tertiary uppercase tracking-wider">Asesora Metodológica</span>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden bg-surface-container-highest shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Monochrome editorial portrait of a mid-forties female biostatistics researcher, sharp thoughtful gaze, sleek tied back hair, wearing a dark turtleneck sweater, studio lighting with faint warm parchment rim." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEnfPIz0l31GYluJ97r2pEqQj5oIsruGfFeQ_kug2ZRfy-6exvLLTT4Tm2mD8aSYZ2TjW90qtWfNg8t3v9q_EPL3Pou9eqUVSsU6UABjm5EjwiXlc0JKUw3z_2zDybRVdODKw0wT19n28ejboxyETiVzZwYCrdhN0guDcOXEqgFNf1l68nKXygD0Q0p8GWHmg5947pnK2cGRltdPXwP-wf0ejB63DOaeYxzyi0"/>
+</div>
+<div class="min-w-0 pr-8">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Dra. Helena Cuéllar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Dpto. de Biología Molecular y Bioética</p>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">IPN • Lab. de Sistemas Complejos</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container-lowest/60 rounded-lg p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">fingerprint</span>
+                ORCID
+              </span>
+<a class="text-primary hover:underline font-label-md text-label-md" href="#">0000-0001-9923-4418</a>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">calendar_clock</span>
+                Reuniones suscritas
+              </span>
+<span class="text-on-surface font-title-sm text-title-sm">12 sesiones</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">tune</span>
+                Instrumentos validados
+              </span>
+<span class="text-secondary font-title-sm text-title-sm">3 Protocolos</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<a class="text-outline hover:text-on-surface flex items-center gap-1 font-body-sm text-body-sm transition-colors" href="mailto:hcuellar@ipn.biomed.mx">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Contacto Institucional</span>
+</a>
+<button class="text-primary hover:text-primary-fixed text-label-md font-label-md uppercase tracking-wider flex items-center gap-0.5" type="button">
+<span>Bitácora</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Dictaminador Externo -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between relative group hover:bg-surface-container transition-colors shadow-sm">
+<div class="absolute top-space-sm right-space-md pt-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container/40 text-secondary uppercase tracking-wider">Dictaminador Externo</span>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden bg-surface-container-highest shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Chiaroscuro studio portrait of a distinguished senior academic researcher in his sixties, grey beard, warm ambient light catching his profile, scholarly posture, archival library background gently out of focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAShFoszNooK2-NYkqop8HjKlR3Gjf4hUK510sFNv9jSRG551JQaXstAk7Zy9iOnkDFpEqLTbdY9sC-l9lu_miYEa7i4sACJbIRvxu4zX1nhRw23sjWIBdiuE9nRAg5mLLCiGmgEfJPs-J6tGUojuA7dH6qESTz8UoTUqLxgiXGRHqDiYMm70F-oB94tz813WGjndCvlx7GIyb8kRtDDXBmNeISL-eVaLDRyIMX"/>
+</div>
+<div class="min-w-0 pr-8">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. Ricardo Londoño</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Facultad de Filosofía de la Ciencia</p>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">Universidad de Salamanca (España)</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container-lowest/60 rounded-lg p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">fingerprint</span>
+                ORCID
+              </span>
+<a class="text-primary hover:underline font-label-md text-label-md" href="#">0000-0003-1288-7731</a>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">calendar_clock</span>
+                Reuniones suscritas
+              </span>
+<span class="text-on-surface font-title-sm text-title-sm">6 sesiones col.</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">rate_review</span>
+                Capítulos dictaminados
+              </span>
+<span class="text-secondary font-title-sm text-title-sm">Cap. I, II y III</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<a class="text-outline hover:text-on-surface flex items-center gap-1 font-body-sm text-body-sm transition-colors" href="mailto:rlondono@usal.es">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Contacto Institucional</span>
+</a>
+<button class="text-primary hover:text-primary-fixed text-label-md font-label-md uppercase tracking-wider flex items-center gap-0.5" type="button">
+<span>Bitácora</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- PRÓXIMA SESIÓN COLEGIADA (TARJETA APERGAMINADA DESTACADA CON DOBLE PANEL) -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Convocatoria Activa</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">notification_important</span>
+          Confirmación obligatoria antes del 22 Mayo
+        </span>
+</div>
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12">
+<!-- Columna Izquierda: Información de Convocatoria -->
+<div class="p-space-lg lg:p-space-xl lg:col-span-7 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="inline-flex items-center gap-2 px-space-sm py-1 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">event_upcoming</span>
+<span>4ª SESIÓN ORDINARIA DE EVALUACIÓN SEMESTRAL</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+              Coloquio de Avance Cuantitativo y Ética Experimental
+            </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs text-body-md font-body-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">calendar_today</span>
+<div>
+<span class="text-on-surface font-title-sm text-title-sm block">Viernes, 29 de Mayo, 2026</span>
+<span class="text-outline text-body-sm font-body-sm">10:00 — 13:00 hrs (GMT-6)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">meeting_room</span>
+<div>
+<span class="text-on-surface font-title-sm text-title-sm block">Sala de Grados 304</span>
+<span class="text-outline text-body-sm font-body-sm">Pabellón Central • Presencial c/ Enlace Remoto</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Puntos del Orden del Día -->
+<div class="space-y-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Orden del Día Aprobado</span>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li class="flex items-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>01.</strong> Validación concluyente de batería de instrumentos de campo bioinformáticos (Fase 03).</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>02.</strong> Verificación documental y descargo ante Comité de Bioética Hospitalaria.</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px] shrink-0 mt-0.5">pending</span>
+<span><strong>03.</strong> Emisión de dictamen colegiado vinculante para habilitar Apertura de Fase 04.</span>
+</li>
+</ul>
+</div>
+<!-- Botones de Acción -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-on-surface font-title-sm text-title-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">picture_as_pdf</span>
+<span>Descargar Convocatoria Oficial (PDF)</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-fixed-dim transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Cargar Documento de Sustentación Previa</span>
+</button>
+</div>
+</div>
+<!-- Columna Derecha: Tarjeta Pergamino con Documento Previo y Quórum -->
+<div class="lg:col-span-5 bg-[#faf8f5] text-[#1e1c1a] p-space-lg lg:p-space-xl flex flex-col justify-between relative shadow-xl">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-[#1e1c1a]/10">
+<div class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-[#5e1600]">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Estatus de Preparación</span>
+</div>
+<span class="text-[11px] font-mono text-[#5e1600]/80">ACTA-PREV-2905</span>
+</div>
+<div>
+<span class="text-[12px] font-sans font-medium uppercase tracking-wider text-[#1e1c1a]/70 block mb-1">Manuscrito en Evaluación</span>
+<h3 class="font-serif text-[20px] leading-snug font-medium text-[#1e1c1a]">
+                Capítulo IV: Epistemología del Marcador Biológico y su Trascendencia Algorítmica (v3.2)
+              </h3>
+<p class="text-[13px] leading-relaxed text-[#1e1c1a]/80 mt-2 font-serif italic">
+                Depositado para revisión ciega y lectura previa el 04 de Mayo de 2026. Consta de 48 páginas y 14 tablas de correspondencia.
+              </p>
+</div>
+<div class="bg-[#f0ebe1] p-3 rounded space-y-2">
+<span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-[#1e1c1a]/80 block">Confirmación de Quórum</span>
+<div class="flex items-center justify-between text-[12px] font-sans">
+<span class="text-[#1e1c1a]/90">Dr. Aurelio Gutiérrez</span>
+<span class="inline-flex items-center gap-1 text-[#255237] font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Asistencia confirmada
+                </span>
+</div>
+<div class="flex items-center justify-between text-[12px] font-sans">
+<span class="text-[#1e1c1a]/90">Dra. Helena Cuéllar</span>
+<span class="inline-flex items-center gap-1 text-[#255237] font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Asistencia confirmada
+                </span>
+</div>
+<div class="flex items-center justify-between text-[12px] font-sans">
+<span class="text-[#1e1c1a]/90">Dr. Ricardo Londoño</span>
+<span class="inline-flex items-center gap-1 text-[#b38a37] font-semibold">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Pendiente vía videoconferencia
+                </span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-[#1e1c1a]/10 flex items-center justify-between text-[12px] font-sans">
+<span class="text-[#1e1c1a]/60">Límite de depósito adicional: 24 Mayo</span>
+<a class="text-[#5e1600] font-semibold hover:underline inline-flex items-center gap-1" href="#">
+<span>Sustituir Anexo</span>
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- HISTORIAL DE ASESORÍAS TUTORIALES (TABLA EDITORIAL) -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Registro Cronológico Vinculante</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Historial de Asesorías Tutoriales Sincrónicas y Asincrónicas</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-body-sm text-outline">Filtro:</span>
+<select class="bg-surface-container px-space-sm py-1 rounded text-body-sm font-body-sm text-on-surface outline-none cursor-pointer">
+<option>Todas las sesiones (Ciclo 2026-I)</option>
+<option>Sincrónicas / Presenciales</option>
+<option>Asincrónicas / Revisión de Capítulo</option>
+</select>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-outline font-label-md text-label-md uppercase tracking-wider">
+<th class="py-space-sm px-space-md font-semibold">Sesión / Fecha</th>
+<th class="py-space-sm px-space-md font-semibold">Modalidad &amp; Interlocutor</th>
+<th class="py-space-sm px-space-md font-semibold">Temas Tratados</th>
+<th class="py-space-sm px-space-md font-semibold">Acuerdos Principales</th>
+<th class="py-space-sm px-space-md font-semibold text-center">Cumplimiento</th>
+<th class="py-space-sm px-space-md font-semibold text-right">Acta Oficial</th>
+</tr>
+</thead>
+<tbody class="text-body-sm font-body-sm divide-y divide-surface-container-highest/40">
+<!-- Fila 1 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block">15 Mayo 2026</span>
+<span class="text-outline font-label-sm text-label-sm">09:30 hrs • 90 min</span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">videocam</span>
+<span>Sincrónica Virtual</span>
+</div>
+<span class="text-outline text-body-sm font-body-sm block">Dr. Aurelio Gutiérrez</span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<p class="font-body-md font-body-md text-on-surface text-line-clamp-2">
+                    Refinamiento del marco conceptual de causalidad ontológica en el Cap. III.
+                  </p>
+</td>
+<td class="py-space-md px-space-md max-w-sm">
+<p class="text-on-surface-variant">
+                    Integrar la objeción de Woodward (2003) sobre manipulabilidad previa a la reunión de comité.
+                  </p>
+</td>
+<td class="py-space-md px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container/40 text-secondary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                    Consignado
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-fixed font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+<span>Folio #MIN-781</span>
+</button>
+</td>
+</tr>
+<!-- Fila 2 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block">30 Abril 2026</span>
+<span class="text-outline font-label-sm text-label-sm">11:00 hrs • 120 min</span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">apartment</span>
+<span>Presencial Lab. 12</span>
+</div>
+<span class="text-outline text-body-sm font-body-sm block">Dra. Helena Cuéllar</span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<p class="font-body-md font-body-md text-on-surface">
+                    Mapeo de matrices de covarianza en transcripción artificial y calibración bioética.
+                  </p>
+</td>
+<td class="py-space-md px-space-md max-w-sm">
+<p class="text-on-surface-variant">
+                    Corregir umbrales de p-valor ajustado bajo corrección Bonferroni en simulaciones.
+                  </p>
+</td>
+<td class="py-space-md px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container/40 text-secondary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                    Consignado
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-fixed font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+<span>Folio #MIN-764</span>
+</button>
+</td>
+</tr>
+<!-- Fila 3 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block">16 Abril 2026</span>
+<span class="text-outline font-label-sm text-label-sm">Asincrónica • Dictamen</span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">mark_email_read</span>
+<span>Asincrónica Anotada</span>
+</div>
+<span class="text-outline text-body-sm font-body-sm block">Dr. Ricardo Londoño</span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<p class="font-body-md font-body-md text-on-surface">
+                    Revisión de galeradas preliminares para envío a la revista <em>Synthese</em>.
+                  </p>
+</td>
+<td class="py-space-md px-space-md max-w-sm">
+<p class="text-on-surface-variant">
+                    Sustituir referencias a ontologías débiles por definición pragmática de Nagel.
+                  </p>
+</td>
+<td class="py-space-md px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-container/30 text-tertiary">
+<span class="material-symbols-outlined text-[13px]">pending</span>
+                    En proceso (85%)
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-fixed font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+<span>Folio #MIN-749</span>
+</button>
+</td>
+</tr>
+<!-- Fila 4 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="py-space-md px-space-md whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block">02 Abril 2026</span>
+<span class="text-outline font-label-sm text-label-sm">10:00 hrs • 60 min</span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">videocam</span>
+<span>Sincrónica Virtual</span>
+</div>
+<span class="text-outline text-body-sm font-body-sm block">Dr. Aurelio Gutiérrez</span>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<p class="font-body-md font-body-md text-on-surface">
+                    Planificación del coloquio semestral y depuración bibliográfica.
+                  </p>
+</td>
+<td class="py-space-md px-space-md max-w-sm">
+<p class="text-on-surface-variant">
+                    Someter formalmente solicitud de quórum ante Dirección de Posgrado.
+                  </p>
+</td>
+<td class="py-space-md px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container/40 text-secondary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                    Consignado
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-fixed font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+<span>Folio #MIN-732</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-outline">
+<span>Mostrando 4 de 18 asesorías registradas en bitácora oficial</span>
+<div class="flex items-center gap-2">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface disabled:opacity-50" disabled="" type="button">Anterior</button>
+<span class="px-2 text-on-surface">1 / 5</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface" type="button">Siguiente</button>
+</div>
+</div>
+</div>
+</section>
+<!-- RECOMENDACIONES BIBLIOGRÁFICAS Y SUGERENCIAS DEL COMITÉ -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Acervo Recomanado por Dictaminadores</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Lecturas Críticas, Fuentes Primarias y DOIs Asignados</h2>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-fixed font-title-sm text-title-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">library_add</span>
+<span>Proponer Adición Bibliográfica</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Rec 1 -->
+<article class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between space-y-space-md hover:bg-surface-container transition-colors shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary">Sugerido por Dra. H. Cuéllar</span>
+<span class="text-outline font-label-sm text-label-sm">Mayo 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface pt-space-xs leading-snug">
+              Causality in the Sciences: Statistical Models versus Epistemic Invariance
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              Illari, P. K., Russo, F., &amp; Williamson, J. — Oxford University Press.
+            </p>
+<p class="font-body-sm text-body-sm text-outline pt-1">
+              “Revisar puntualmente el capítulo 7 para robustecer el contra-argumento al reduccionismo mecanicista estricto.”
+            </p>
+</div>
+<div class="pt-space-sm border-t border-surface-container-highest/60 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">link</span>
+              DOI: 10.1093/acprof:oso/9780199574131.001
+            </span>
+<a class="text-primary hover:text-primary-fixed inline-flex items-center gap-0.5 font-label-md text-label-md" href="https://doi.org" rel="noopener noreferrer" target="_blank">
+<span>Abrir</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</article>
+<!-- Rec 2 -->
+<article class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between space-y-space-md hover:bg-surface-container transition-colors shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed">Sugerido por Dr. A. Gutiérrez</span>
+<span class="text-outline font-label-sm text-label-sm">Abril 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface pt-space-xs leading-snug">
+              Making Things Happen: A Theory of Causal Explanation
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              Woodward, James — Oxford Studies in the Philosophy of Science.
+            </p>
+<p class="font-body-sm text-body-sm text-outline pt-1">
+              “Lectura indispensable para articular el capítulo III sobre la intervención contrafáctica en modelos de expresión génica.”
+            </p>
+</div>
+<div class="pt-space-sm border-t border-surface-container-highest/60 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">link</span>
+              DOI: 10.1093/0195155270.001.0001
+            </span>
+<a class="text-primary hover:text-primary-fixed inline-flex items-center gap-0.5 font-label-md text-label-md" href="https://doi.org" rel="noopener noreferrer" target="_blank">
+<span>Abrir</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</article>
+<!-- Rec 3 -->
+<article class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between space-y-space-md hover:bg-surface-container transition-colors shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded bg-secondary-container/30 text-secondary">Sugerido por Dr. R. Londoño</span>
+<span class="text-outline font-label-sm text-label-sm">Marzo 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface pt-space-xs leading-snug">
+              Synthetic Biology and the Rise of In-Silico Epistemic Agents
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              European Journal for Philosophy of Science, Vol. 14, Art. 22.
+            </p>
+<p class="font-body-sm text-body-sm text-outline pt-1">
+              “Contrastar la sección metodológica con nuestra propuesta de validación cruzada bioética.”
+            </p>
+</div>
+<div class="pt-space-sm border-t border-surface-container-highest/60 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">link</span>
+              DOI: 10.1007/s13194-024-00512-8
+            </span>
+<a class="text-primary hover:text-primary-fixed inline-flex items-center gap-0.5 font-label-md text-label-md" href="https://doi.org" rel="noopener noreferrer" target="_blank">
+<span>Abrir</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- PIE DE PÁGINA CON SELLO DE INTEGRIDAD ACADÉMICA -->
+<footer class="pt-space-lg pb-space-xl border-t border-surface-container-highest/40 flex flex-col md:flex-row items-center justify-between gap-space-md text-outline font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">lock</span>
+<span>Bitácora tutorial sincronizada con Sistema Central de Posgrado • Hash de verificación: <code class="font-mono text-on-surface-variant text-[12px]">e4b89a91c</code></span>
+</div>
+<div class="flex items-center gap-space-md text-label-sm font-label-sm">
+<a class="hover:text-on-surface underline" href="#">Criterios de Evaluación</a>
+<span>•</span>
+<a class="hover:text-on-surface underline" href="#">Manual del Tesista</a>
+<span>•</span>
+<span class="text-on-surface">Secretaría Académica de Posgrado</span>
+</div>
+</footer>
+</div>
+</div></main></div></body></html>

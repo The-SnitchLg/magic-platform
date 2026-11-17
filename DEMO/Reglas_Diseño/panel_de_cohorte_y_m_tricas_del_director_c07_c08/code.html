@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error": "#690005", "on-background": "#e7e1de", "tertiary-fixed": "#ffdea4", "surface-container-low": "#1d1b19", "tertiary-container": "#b38a37", "primary-fixed": "#ffdbd1", "on-surface": "#e7e1de", "secondary-container": "#255237", "surface-variant": "#373432", "error-container": "#93000a", "outline": "#a48b84", "surface-container-highest": "#373432", "on-primary-fixed-variant": "#7e2b10", "surface-container-lowest": "#100e0c", "primary": "#ffb59f", "on-tertiary": "#412d00", "on-surface-variant": "#dcc1b9", "outline-variant": "#56423d", "inverse-on-surface": "#32302e", "surface-bright": "#3b3936", "on-tertiary-fixed-variant": "#5d4200", "surface-tint": "#ffb59f", "surface-container": "#211f1d", "secondary-fixed-dim": "#a1d2af", "primary-container": "#dd7252", "on-secondary-container": "#93c3a2", "on-primary-fixed": "#3a0a00", "on-secondary-fixed-variant": "#224f35", "primary-fixed-dim": "#ffb59f", "tertiary": "#eec067", "on-tertiary-container": "#382700", "on-secondary-fixed": "#002110", "surface-dim": "#151311", "secondary-fixed": "#bceecb", "secondary": "#a1d2af", "surface": "#151311", "on-tertiary-fixed": "#261900", "tertiary-fixed-dim": "#eec067", "inverse-surface": "#e7e1de", "on-primary-container": "#531200", "on-secondary": "#073820", "inverse-primary": "#9d4225", "on-error-container": "#ffdad6", "surface-container-high": "#2c2a27", "background": "#151311", "error": "#ffb4ab", "on-primary": "#5e1600" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-lg": "1.5rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-md": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "3rem", "space-xl": "2.5rem" }, fontFamily: { "body-sm": ["Manrope"], "label-md": ["Manrope"], "headline-lg-mobile": ["Newsreader"], "headline-xl": ["Newsreader"], "body-lg": ["Newsreader"], "headline-sm": ["Newsreader"], "body-md": ["Manrope"], "headline-xl-mobile": ["Newsreader"], "label-sm": ["Manrope"], "title-md": ["Manrope"], "title-sm": ["Manrope"], "headline-md": ["Newsreader"], "headline-lg": ["Newsreader"] }, fontSize: { "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "title-sm": ["15px", { "lineHeight": "22px", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-start gap-space-sm px-space-sm"><div class="w-9 h-9 rounded bg-primary-container flex items-center justify-center text-on-primary-container shrink-0 mt-0.5"><span class="material-symbols-outlined text-[20px]">history_edu</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Posgrados &amp; Inv.</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Plataforma Académica</span></div></div><div class="h-px w-full bg-outline-variant/30"></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-highest text-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="acuerdos-iniciales" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-title-sm text-title-sm">Acuerdos Iniciales</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configurar-ruta" href="#"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-title-sm text-title-sm">Configurar Ruta</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="mi-investigacion" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-title-sm text-title-sm">Mi Investigación</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded transition-all bg-surface-container-highest text-primary font-semibold" data-path="panel-de-cohorte" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-title-sm text-title-sm">Panel de Cohorte</span></a></nav></div><div class="flex flex-col gap-space-sm pt-space-md border-t border-outline-variant/30"><div class="flex items-center gap-space-xs px-space-sm text-secondary"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm">Archivo Académico Conectado</span></div><div class="p-space-sm rounded bg-surface-container flex flex-col gap-0.5"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Candidato Doctoral</span><span class="font-title-sm text-title-sm text-on-surface truncate">Mateo Restrepo Gaviria</span><span class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm">Doc. en Epistemología</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-sm text-on-surface-variant"><span class="font-title-sm text-title-sm text-on-surface">Doctorado en Filosofía</span><span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span><span class="font-body-md text-body-md text-on-surface-variant">Candidatura y Tesis</span><span class="ml-space-sm px-space-xs py-0.5 rounded bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Sincronizado</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-on-surface"><span class="font-label-md text-label-md text-outline uppercase">Período:</span><span class="font-title-sm text-title-sm">2025-I</span><span class="material-symbols-outlined text-[18px] text-outline">expand_more</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest font-semibold">C07 • C08 Colegiatura Doctoral</span>
+<span class="text-outline text-body-sm">•</span>
+<span class="font-label-sm text-label-sm text-outline">Cohorte Activa 2026-I</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Observatorio de Rendimiento Investigativo</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Monitor rector de avance doctoral, ritmo metodológico de disertaciones y suscripción de avales colegiados.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto flex-wrap">
+<div class="flex items-center bg-surface-container-high rounded px-space-sm py-1.5 gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">filter_list</span>
+<select class="bg-transparent font-title-sm text-title-sm text-on-surface focus:outline-none cursor-pointer pr-space-xs">
+<option class="bg-surface-container-high" value="all">Todas las Líneas de Énfasis</option>
+<option class="bg-surface-container-high" value="ontologia">Ontología &amp; Epistemología</option>
+<option class="bg-surface-container-high" value="estetica">Filosofía Política y Ética</option>
+<option class="bg-surface-container-high" value="hermeneutica">Hermenéutica Aplicada</option>
+</select>
+</div>
+<button class="flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-variant text-on-surface px-space-md py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm" id="exportBtn">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span>Exportar Informe de Cohorte (.CSV / PDF)</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="bg-[#FAF8F5] text-[#1e1c1a] rounded p-space-md shadow-md flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-[#756f67] uppercase tracking-wider font-semibold">Población Activa</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-xl text-headline-xl font-headline-sm text-[#1e1c1a] leading-none">15</span>
+<span class="font-body-md text-body-md text-[#59534c]">tesistas</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-[#1e1c1a]/5 flex items-center justify-center text-[#1e1c1a]">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-[#59534c]">100% de cohorte en seguimiento</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+          3 en alerta de ritmo
+        </span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-[#255237]/20"></div>
+</div>
+<div class="bg-surface-container rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Cumplimiento de Acuerdos</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-xl text-headline-xl font-headline-sm text-on-surface leading-none">84%</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-secondary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+4.2%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">versus ciclo anterior</span>
+</div>
+</div>
+<div class="bg-surface-container rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Avales Expedidos</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-xl text-headline-xl font-headline-sm text-on-surface leading-none">18</span>
+<span class="font-body-md text-body-md text-on-surface-variant">firmados</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">draw</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ciclo semestral en curso</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+          5 pendientes de suscripción
+        </span>
+</div>
+</div>
+<div class="bg-surface-container rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Respuesta Docente</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-xl text-headline-xl font-headline-sm text-on-surface leading-none">4.2</span>
+<span class="font-body-md text-body-md text-on-surface-variant">días prom.</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Meta institucional ≤ 5 días
+        </span>
+<span class="font-label-sm text-label-sm text-outline">Óptimo</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container rounded p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-xs gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Bandeja de Decisiones Prioritarias</h2>
+<span class="ml-space-xs px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">
+          3 Asuntos Requeridos
+        </span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Atención recomendada antes del cierre semanal</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xs">
+<div class="bg-surface-container-high rounded p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+              En Espera • 48h
+            </span>
+<span class="material-symbols-outlined text-outline text-[18px]">biotech</span>
+</div>
+<div class="mt-1">
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold">Sofía Valenzuela</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm line-clamp-1">
+              "Genealogía de la sospecha en la hermenéutica latinoamericana"
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+            Ajuste metodológico remitido por el comité. Requiere validación del instrumento de muestreo de corpus documental.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Fase: Diseño Metodológico</span>
+<button class="bg-primary hover:bg-[#ff9f84] text-on-primary font-title-sm text-title-sm px-space-md py-1.5 rounded transition-colors shadow-sm">
+            Revisar Muestreo
+          </button>
+</div>
+</div>
+<div class="bg-surface-container-high rounded p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/25 text-tertiary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+              Firma Colegiada
+            </span>
+<span class="material-symbols-outlined text-outline text-[18px]">history_edu</span>
+</div>
+<div class="mt-1">
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold">Camilo Benítez</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm line-clamp-1">
+              "Epistemología del testimonio y desacuerdo entre pares"
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+            Capítulo III aprobado por co-director externo. Resta consignar el aval directorial para remitir al repositorio institucional.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Fase: Redacción y Defensa</span>
+<button class="bg-primary-container hover:bg-[#c96245] text-on-primary-container font-title-sm text-title-sm px-space-md py-1.5 rounded transition-colors shadow-sm">
+            Suscribir Aval
+          </button>
+</div>
+</div>
+<div class="bg-surface-container-high rounded p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+              Hito Completado
+            </span>
+<span class="material-symbols-outlined text-outline text-[18px]">verified_user</span>
+</div>
+<div class="mt-1">
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold">Diego Saavedra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm line-clamp-1">
+              "Semántica veritativo-condicional en contextos opacos"
+            </p>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">
+            Comprobación bibliométrica y entrega de avance semestral radicada. Listo para habilitar siguiente hito.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Fase: Trabajo de Campo</span>
+<button class="bg-surface-container-highest hover:bg-surface-variant text-on-surface font-title-sm text-title-sm px-space-md py-1.5 rounded transition-colors shadow-sm">
+            Habilitar Hito
+          </button>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<div class="lg:col-span-7 bg-[#FAF8F5] text-[#1e1c1a] rounded p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-[#756f67] uppercase tracking-wider font-semibold">Trayectoria Monográfica</span>
+<h3 class="font-headline-sm text-headline-sm text-[#1e1c1a]">Distribución de Tesistas por Etapa</h3>
+</div>
+<span class="font-label-md text-label-md px-2 py-1 rounded bg-[#1e1c1a]/5 text-[#59534c]">
+            Total: 15 Candidatos
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="font-medium text-[#1e1c1a]">E1 • Problematización &amp; Estado del Arte</span>
+<span class="font-semibold text-[#59534c]">1 tesista (7%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-[#1e1c1a]/10 overflow-hidden">
+<div class="h-full rounded-full bg-[#b38a37]" style="width: 7%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="font-medium text-[#1e1c1a]">E2 • Marco Teórico &amp; Conceptual</span>
+<span class="font-semibold text-[#59534c]">2 tesistas (13%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-[#1e1c1a]/10 overflow-hidden">
+<div class="h-full rounded-full bg-[#b38a37]" style="width: 13%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="font-medium text-[#1e1c1a] flex items-center gap-1">
+                E3 • Diseño Metodológico &amp; Muestreo
+                <span class="px-1.5 py-0.2 rounded bg-[#dd7252]/20 text-[#7e2b10] font-label-sm text-[10px] font-semibold">Mayor Concentración</span>
+</span>
+<span class="font-bold text-[#7e2b10]">5 tesistas (33%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-[#1e1c1a]/10 overflow-hidden">
+<div class="h-full rounded-full bg-[#dd7252]" style="width: 33%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="font-medium text-[#1e1c1a]">E4 • Trabajo de Campo &amp; Análisis de Corpus</span>
+<span class="font-semibold text-[#59534c]">4 tesistas (27%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-[#1e1c1a]/10 overflow-hidden">
+<div class="h-full rounded-full bg-[#255237]" style="width: 27%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="font-medium text-[#1e1c1a]">E5 • Redacción Final &amp; Defensa Doctoral</span>
+<span class="font-semibold text-[#59534c]">3 tesistas (20%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-[#1e1c1a]/10 overflow-hidden">
+<div class="h-full rounded-full bg-[#255237]" style="width: 20%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-[#1e1c1a]/5 p-space-sm rounded flex items-center justify-between text-[#59534c] font-body-sm text-body-sm">
+<span class="italic font-headline-sm">Etapa media de la cohorte: Fase 3.4 (Semestre IV)</span>
+<span class="font-label-md text-label-md text-[#1e1c1a] font-semibold uppercase tracking-wider">Ritmo sostenido</span>
+</div>
+</div>
+<div class="lg:col-span-5 bg-[#FAF8F5] text-[#1e1c1a] rounded p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-[#756f67] uppercase tracking-wider font-semibold">Criterio Institucional</span>
+<h3 class="font-headline-sm text-headline-sm text-[#1e1c1a]">Semáforo de Gestión de Ritmo</h3>
+</div>
+<span class="material-symbols-outlined text-[#756f67]">traffic</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#59534c] mt-1 mb-space-md">
+          Clasificación dinámica por desfase temporal entre el plan de investigación radicado y los hitos convalidados.
+        </p>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between p-space-sm rounded bg-[#255237]/10">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-[#255237]"></span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-[#1e1c1a] font-semibold">Al Día con el Cronograma</span>
+<span class="font-body-sm text-body-sm text-[#59534c]">Sin desviaciones mayores a 15 días</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#255237] font-bold">9</span>
+<span class="font-label-sm text-label-sm text-[#59534c]">investigadores</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-[#b38a37]/15">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-[#b38a37]"></span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-[#1e1c1a] font-semibold">En Revisión Docente</span>
+<span class="font-body-sm text-body-sm text-[#59534c]">Entregas bajo dictamen de pares</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#b38a37] font-bold">3</span>
+<span class="font-label-sm text-label-sm text-[#59534c]">investigadores</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-[#dd7252]/15">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-[#dd7252]"></span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-[#1e1c1a] font-semibold">Alerta de Rezago</span>
+<span class="font-body-sm text-body-sm text-[#59534c]">Desfase mayor a 30 días calendarios</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#dd7252] font-bold">3</span>
+<span class="font-label-sm text-label-sm text-[#59534c]">investigadores</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-[#59534c]">Intervención tutelar sugerida</span>
+<button class="bg-[#1e1c1a] hover:bg-[#373432] text-[#FAF8F5] px-space-md py-1.5 rounded font-label-md text-label-md transition-colors shadow-sm">
+          Convocar Tutoría Extraordinaria
+        </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Padrón de Seguimiento</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Registro Colegiado de Investigadores</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-high rounded px-space-sm py-1.5 gap-space-xs text-on-surface-variant w-64">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none w-full" placeholder="Filtrar por tesista o director..." type="text"/>
+</div>
+<button class="p-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors" title="Exportar vista">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Tesista &amp; Proyecto</th>
+<th class="py-space-sm px-space-sm">Director Principal</th>
+<th class="py-space-sm px-space-sm">Etapa Actual</th>
+<th class="py-space-sm px-space-sm">Avance</th>
+<th class="py-space-sm px-space-sm">Próxima Entrega</th>
+<th class="py-space-sm px-space-md text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface">Mateo Restrepo Gaviria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm truncate max-w-sm">
+                  Límites epistemológicos de los modelos conexionistas
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">ID: DOC-2024-0892</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Dra. Helena Cuéllar</span>
+<span class="font-label-sm text-label-sm text-outline">Dept. Filosofía de la Ciencia</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-semibold inline-block">
+                E4 • Análisis de Corpus
+              </span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs w-36">
+<div class="w-full bg-surface-container-highest rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 78%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">78%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">15 Mar, 2026</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">En cronograma</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+                Auditar Avance
+              </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/60 transition-colors bg-surface-container-low/40">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface">Sofía Valenzuela Silva</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm truncate max-w-sm">
+                  Genealogía de la sospecha en la hermenéutica
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">ID: DOC-2024-0911</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Dr. Aurelio Posada</span>
+<span class="font-label-sm text-label-sm text-outline">Dept. Humanidades</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold inline-block">
+                E3 • Muestreo
+              </span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs w-36">
+<div class="w-full bg-surface-container-highest rounded-full h-2">
+<div class="bg-primary-container h-2 rounded-full" style="width: 48%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">48%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">02 Mar, 2026</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Pausa metodológica</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-primary hover:bg-[#ff9f84] text-on-primary font-label-md text-label-md transition-colors">
+                Dictamen Prioritario
+              </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface">Camilo Benítez Arango</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm truncate max-w-sm">
+                  Epistemología del testimonio y desacuerdo entre pares
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">ID: DOC-2023-0412</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Dra. Marta Ibarra</span>
+<span class="font-label-sm text-label-sm text-outline">Dept. Filosofía Analítica</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-semibold inline-block">
+                E5 • Redacción Final
+              </span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs w-36">
+<div class="w-full bg-surface-container-highest rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 92%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">92%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">18 Feb, 2026</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Requiere aval</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-primary-container hover:bg-[#c96245] text-on-primary-container font-label-md text-label-md transition-colors">
+                Suscripción
+              </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/60 transition-colors bg-surface-container-low/40">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface">Diego Saavedra Morales</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm truncate max-w-sm">
+                  Semántica veritativo-condicional en contextos opacos
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">ID: DOC-2024-0105</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Dr. Ricardo Londoño</span>
+<span class="font-label-sm text-label-sm text-outline">Dept. Lógica</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-semibold inline-block">
+                E4 • Trabajo de Campo
+              </span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs w-36">
+<div class="w-full bg-surface-container-highest rounded-full h-2">
+<div class="bg-tertiary h-2 rounded-full" style="width: 65%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">65%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">26 Feb, 2026</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">Hito verificado</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+                Ver Ficha
+              </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface">Lucía Cárdenas Vélez</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic font-headline-sm truncate max-w-sm">
+                  Deontología de algoritmos generativos en biomedicina
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">ID: DOC-2025-0019</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Dra. Gabriela Soto</span>
+<span class="font-label-sm text-label-sm text-outline">Dept. Bioética</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm font-semibold inline-block">
+                E1 • Problematización
+              </span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs w-36">
+<div class="w-full bg-surface-container-highest rounded-full h-2">
+<div class="bg-outline h-2 rounded-full" style="width: 22%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-semibold">22%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">30 Mar, 2026</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">En inducción</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+                Ver Ficha
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pt-space-sm gap-space-sm text-outline font-body-sm text-body-sm">
+<div class="flex items-center gap-1">
+<span>Mostrando</span>
+<span class="text-on-surface font-semibold">1 a 5</span>
+<span>de</span>
+<span class="text-on-surface font-semibold">15 investigadores registrados</span>
+</div>
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-outline hover:text-on-surface hover:bg-surface-variant transition-colors disabled:opacity-40" disabled="">
+          Anterior
+        </button>
+<button class="px-space-sm py-1 rounded bg-surface-container-highest text-primary font-semibold">
+          1
+        </button>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors">
+          2
+        </button>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors">
+          3
+        </button>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors">
+          Siguiente
+        </button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pb-space-lg">
+<div class="bg-surface-container rounded p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Próximo Comité Doctoral Ordinario</span>
+<span class="font-body-sm text-body-sm text-outline">Jueves 12 de Marzo de 2026 • Sala de Decanatura</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+        Ver Orden del Día
+      </button>
+</div>
+<div class="bg-surface-container rounded p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">collections_bookmark</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Depósito de Protocolos &amp; Rúbricas</span>
+<span class="font-body-sm text-body-sm text-outline">Acuerdo Académico 04 de 2025 homologado</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+        Consultar Acervo
+      </button>
+</div>
+</div>
+<script>
+    (function() {
+      const cohorteNav = document.querySelector('aside nav a[data-path="panel-de-cohorte"]');
+      if (cohorteNav) {
+        document.querySelectorAll('aside nav a').forEach(el => {
+          el.className = 'flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all';
+        });
+        cohorteNav.className = 'flex items-center gap-space-sm px-space-sm py-space-sm rounded bg-surface-container-highest text-primary font-semibold transition-all';
+      }
+
+      const exportBtn = document.getElementById('exportBtn');
+      if (exportBtn) {
+        exportBtn.addEventListener('click', function() {
+          const original = this.innerHTML;
+          this.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin text-primary">sync</span><span>Generando dossier de cohorte...</span>';
+          setTimeout(() => {
+            this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-secondary">check</span><span>Informe C07-C08 Descargado</span>';
+            setTimeout(() => {
+              this.innerHTML = original;
+            }, 3000);
+          }, 1200);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

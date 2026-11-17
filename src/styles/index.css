@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #1e1c1a;
+  --color-surface-dim: #151311;
+  --color-surface-low: #1d1b19;
+  --color-surface: #211f1d;
+  --color-surface-high: #2c2a27;
+  --color-surface-highest: #373432;
+  
+  --color-paper: #faf8f5;
+  --color-paper-subtle: #f3efe9;
+  --color-paper-border: #e3dcd1;
+  --color-paper-inset: #ede8e1;
+  
+  --color-primary: #c05c3d;
+  --color-primary-hover: #ab5034;
+  --color-primary-container: #dd7252;
+  --color-on-primary-container: #531200;
+  
+  --color-secondary: #2d5a3f;
+  --color-secondary-container: #255237;
+  --color-sage-ink: #8cb89f;
+  
+  --color-tertiary: #c49a45;
+  --color-tertiary-container: #b38a37;
+  --color-ochre-ink: #dfbe76;
+  
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  
+  --color-ink-dark: #e7e1de;
+  --color-ink-paper: #1e1c1a;
+  --color-outline: #a48b84;
+  --color-outline-variant: #56423d;
+
+  --font-editorial: "Newsreader", Georgia, serif;
+  --font-interface: "Manrope", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink-dark);
+  font-family: var(--font-interface);
+  min-height: 100vh;
+}
+
+/* Custom styling for editorial paper cards */
+.document-sheet {
+  background-color: var(--color-paper);
+  color: var(--color-ink-paper);
+  box-shadow: 0 4px 20px -2px rgba(10, 9, 8, 0.35);
+  border: 1px solid rgba(227, 220, 209, 0.8);
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

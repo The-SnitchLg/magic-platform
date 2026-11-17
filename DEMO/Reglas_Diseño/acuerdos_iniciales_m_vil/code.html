@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#151311;color:#e7e1de;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#e7e1de","inverse-surface":"#e7e1de","error":"#ffb4ab","surface":"#151311","on-tertiary-fixed-variant":"#5d4200","on-secondary":"#073820","on-primary":"#5e1600","secondary-fixed-dim":"#a1d2af","inverse-primary":"#9d4225","inverse-on-surface":"#32302e","background":"#151311","outline":"#a48b84","on-primary-fixed-variant":"#7e2b10","surface-dim":"#151311","surface-container-highest":"#373432","outline-variant":"#56423d","on-secondary-container":"#93c3a2","on-primary-container":"#531200","tertiary-fixed-dim":"#eec067","surface-container-low":"#1d1b19","surface-variant":"#373432","on-surface-variant":"#dcc1b9","on-tertiary":"#412d00","on-secondary-fixed-variant":"#224f35","primary-fixed":"#ffdbd1","secondary-fixed":"#bceecb","primary-container":"#dd7252","surface-container-high":"#2c2a27","primary-fixed-dim":"#ffb59f","surface-container":"#211f1d","surface-bright":"#3b3936","on-tertiary-container":"#382700","surface-tint":"#ffb59f","on-surface":"#e7e1de","on-tertiary-fixed":"#261900","tertiary":"#eec067","error-container":"#93000a","tertiary-container":"#b38a37","tertiary-fixed":"#ffdea4","secondary-container":"#255237","on-secondary-fixed":"#002110","surface-container-lowest":"#100e0c","secondary":"#a1d2af","on-error":"#690005","primary":"#ffb59f","on-error-container":"#ffdad6","on-primary-fixed":"#3a0a00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","margin-mobile":"1.25rem","margin":"3rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2.5rem"},fontFamily:{"label-md":["Manrope"],"headline-md":["Newsreader"],"body-lg":["Newsreader"],"title-sm":["Manrope"],"body-md":["Manrope"],"headline-lg-mobile":["Newsreader"],"headline-sm":["Newsreader"],"body-sm":["Manrope"],"headline-xl-mobile":["Newsreader"],"headline-lg":["Newsreader"],"headline-xl":["Newsreader"],"title-md":["Manrope"],"label-sm":["Manrope"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"30px","fontWeight":"400"}],"title-sm":["15px",{"lineHeight":"22px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="text-primary font-headline-sm text-headline-sm italic leading-none">Posgrados &amp; Inv.</span><span class="text-outline/40 text-[10px]">•</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant/80 truncate">Plataforma Académica</span></div><div class="flex items-center gap-space-xs mt-0.5"><button class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors py-0.5 max-w-[200px]"><span class="font-label-md text-label-md text-secondary truncate">Cohorte 2024-II · Doctorado</span><span class="material-symbols-outlined text-[14px] text-secondary">expand_more</span></button></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificaciones académicas" class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-8 space-y-space-md">
+<!-- Micro Notification Bar -->
+<div class="flex items-center justify-between bg-surface-container-high px-3 py-2 rounded-xl text-on-surface">
+<div class="flex items-center space-x-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-tertiary shrink-0 animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim truncate">En revisión: Dr. Carlos Gutiérrez</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-0.5 rounded-lg shrink-0">
+<span class="font-label-sm text-[10px] text-on-surface-variant font-bold">2026-I</span>
+<span class="material-symbols-outlined text-[13px] text-on-surface-variant">verified</span>
+</div>
+</div>
+<!-- Document Meta & Title Section -->
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase font-semibold">Cód. Expediente C01-DOC</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/40 px-2 py-0.5 rounded-full font-medium">Fase Inicial</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight">Acta Concertada de Acuerdos Iniciales</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Formalización metodológica y pauta operativa doctoral</p>
+</div>
+<!-- Tarjeta Clara 1: Ficha Técnica Concertada -->
+<div class="bg-white text-surface-container-lowest rounded-xl p-4 shadow-xl flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-surface-variant uppercase tracking-wider font-bold">Ficha Técnica Concertada</span>
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified_user</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] uppercase text-outline-variant font-semibold">Título Registrado de Investigación</span>
+<h2 class="font-headline-sm text-headline-sm text-surface-container-lowest leading-snug mt-0.5">Impacto de la Economía Circular en la Competitividad de MIPYMES Industriales</h2>
+</div>
+<!-- Pregunta Rectora Directriz -->
+<div class="bg-amber-50 rounded-xl p-3.5 space-y-1">
+<div class="flex items-center space-x-1.5 text-amber-900">
+<span class="material-symbols-outlined text-[16px]">psychology_alt</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wide">Pregunta Rectora Directriz</span>
+</div>
+<p class="font-body-lg text-body-lg text-amber-950 italic leading-relaxed">
+        “¿En qué medida la adopción de bucles regenerativos de insumos incide sobre la resiliencia operativa y la tasa de margen neto en MIPYMES de manufactura pesada?”
+      </p>
+</div>
+<!-- Resumen de 3 píldoras -->
+<div class="grid grid-cols-3 gap-1.5 pt-1">
+<div class="bg-surface-variant/10 rounded-lg p-2 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-primary-container text-[16px]">account_tree</span>
+<span class="font-label-sm text-[9px] uppercase text-surface-variant font-bold mt-1">Metodología</span>
+<span class="font-body-sm text-[11px] font-semibold text-surface-container-lowest leading-tight">Mixto Concurrente</span>
+</div>
+<div class="bg-surface-variant/10 rounded-lg p-2 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-primary-container text-[16px]">groups</span>
+<span class="font-label-sm text-[9px] uppercase text-surface-variant font-bold mt-1">Muestra</span>
+<span class="font-body-sm text-[11px] font-semibold text-surface-container-lowest leading-tight">35 Fabricantes</span>
+</div>
+<div class="bg-surface-variant/10 rounded-lg p-2 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-primary-container text-[16px]">event_repeat</span>
+<span class="font-label-sm text-[9px] uppercase text-surface-variant font-bold mt-1">Tutoría</span>
+<span class="font-body-sm text-[11px] font-semibold text-surface-container-lowest leading-tight">Quincenal Sincr.</span>
+</div>
+</div>
+</div>
+<!-- Tarjeta Clara 2: Matriz de Compromisos Vinculantes -->
+<div class="bg-white text-surface-container-lowest rounded-xl p-4 shadow-xl flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title-sm text-title-sm text-surface-container-lowest">Matriz de Compromisos</h3>
+<p class="font-label-sm text-label-sm text-secondary-container font-semibold">3 de 4 Requisitos Validados</p>
+</div>
+<div class="w-9 h-9 rounded-full bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">task_alt</span>
+</div>
+</div>
+<!-- Lista con Checkboxes de Avance -->
+<div class="space-y-2.5">
+<!-- Item 1 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-variant/5">
+<div class="w-5 h-5 rounded bg-secondary-container flex items-center justify-center text-on-secondary shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">done</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-body-sm text-body-sm text-surface-container-lowest font-medium leading-snug">Delimitación de marco conceptual y estado del arte</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="bg-secondary-container/20 text-on-secondary-fixed-variant font-label-sm text-[10px] px-1.5 py-0.5 rounded font-bold uppercase">Validado</span>
+<span class="font-body-sm text-[10px] text-surface-variant">14 Feb 2026</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-variant/5">
+<div class="w-5 h-5 rounded bg-secondary-container flex items-center justify-center text-on-secondary shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">done</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-body-sm text-body-sm text-surface-container-lowest font-medium leading-snug">Diseño y parametrización de instrumentos de campo</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="bg-secondary-container/20 text-on-secondary-fixed-variant font-label-sm text-[10px] px-1.5 py-0.5 rounded font-bold uppercase">Notificado</span>
+<span class="font-body-sm text-[10px] text-surface-variant">22 Feb 2026</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-variant/5">
+<div class="w-5 h-5 rounded bg-secondary-container flex items-center justify-center text-on-secondary shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">done</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-body-sm text-body-sm text-surface-container-lowest font-medium leading-snug">Plan de gestión de datos y consentimiento institucional</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="bg-secondary-container/20 text-on-secondary-fixed-variant font-label-sm text-[10px] px-1.5 py-0.5 rounded font-bold uppercase">Validado</span>
+<span class="font-body-sm text-[10px] text-surface-variant">28 Feb 2026</span>
+</div>
+</div>
+</div>
+<!-- Item 4 (Pendiente) -->
+<div class="flex flex-col p-2.5 rounded-lg bg-primary-container/10 space-y-2">
+<div class="flex items-start gap-2.5">
+<div class="w-5 h-5 rounded bg-white shadow-sm flex items-center justify-center shrink-0 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-body-sm text-body-sm text-surface-container-lowest font-semibold leading-snug">Firma formal de compromiso y dedicación horaria</p>
+<span class="text-on-primary-container font-label-sm text-[10px] uppercase font-bold tracking-wide">Pendiente de firma autógrafa digital</span>
+</div>
+</div>
+<button class="w-full bg-primary-container hover:bg-inverse-primary text-on-primary font-label-md text-label-md py-2 px-3 rounded-lg shadow-sm flex items-center justify-center gap-1.5 transition-all active:scale-[0.98]" id="btnSign">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Firmar Acta Digital</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tarjeta Oscura: Radar Epistemológico y Factibilidad -->
+<div class="bg-surface-container-low text-on-surface rounded-xl p-4 shadow-xl flex flex-col space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Análisis Paramétrico</span>
+<h3 class="font-title-md text-title-md text-on-surface">Radar Epistemológico</h3>
+</div>
+<div class="flex items-baseline gap-0.5 bg-surface-container-high px-2.5 py-1 rounded-lg">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">90.5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">%</span>
+</div>
+</div>
+<!-- Inline SVG Mobile Radar Visualizer -->
+<div class="w-full flex items-center justify-center py-1">
+<svg class="w-52 h-44" fill="none" viewbox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+<!-- Concentric Guideline Rings -->
+<polygon fill="none" opacity="0.6" points="120,20 210,100 120,180 30,100" stroke="#373432" stroke-width="1"></polygon>
+<polygon fill="none" opacity="0.4" points="120,45 180,100 120,155 60,100" stroke="#373432" stroke-width="1"></polygon>
+<polygon fill="none" opacity="0.2" points="120,70 150,100 120,130 90,100" stroke="#373432" stroke-width="1"></polygon>
+<!-- Axis Cross Lines -->
+<line stroke="#56423d" stroke-dasharray="2 3" stroke-width="1" x1="120" x2="120" y1="20" y2="180"></line>
+<line stroke="#56423d" stroke-dasharray="2 3" stroke-width="1" x1="30" x2="210" y1="100" y2="100"></line>
+<!-- Radar Polygon Data: Top=95%, Right=92%, Bottom=90%, Left=85% -->
+<polygon fill="#dd7252" fill-opacity="0.32" points="120,24 203,100 120,172 38,100" stroke="#ffb59f" stroke-width="2"></polygon>
+<!-- Data Pin Points -->
+<circle cx="120" cy="24" fill="#ffb59f" r="3.5"></circle>
+<circle cx="203" cy="100" fill="#ffb59f" r="3.5"></circle>
+<circle cx="120" cy="172" fill="#ffb59f" r="3.5"></circle>
+<circle cx="38" cy="100" fill="#ffb59f" r="3.5"></circle>
+<!-- Labels inside canvas -->
+<text fill="#ffb59f" font-family="Manrope" font-size="10" font-weight="600" text-anchor="middle" x="120" y="14">Claridad (95%)</text>
+<text fill="#e7e1de" font-family="Manrope" font-size="9" text-anchor="start" x="215" y="103">Viabilidad (92%)</text>
+<text fill="#e7e1de" font-family="Manrope" font-size="9" text-anchor="middle" x="120" y="194">Sustento (90%)</text>
+<text fill="#e7e1de" font-family="Manrope" font-size="9" text-anchor="end" x="25" y="103">Ética (85%)</text>
+</svg>
+</div>
+<!-- Barras de Progreso Métricas -->
+<div class="space-y-3 pt-1">
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-sm text-body-sm text-on-surface">Claridad Conceptual</span>
+<span class="font-label-md text-label-md text-primary font-bold">95%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-sm text-body-sm text-on-surface">Viabilidad Metodológica</span>
+<span class="font-label-md text-label-md text-secondary font-bold">92%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-sm text-body-sm text-on-surface">Sustento Bibliográfico</span>
+<span class="font-label-md text-label-md text-tertiary font-bold">90%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-sm text-body-sm text-on-surface">Aprobación Ética y Consentimiento</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">85%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel de Veredicto del Tutor -->
+<div class="bg-surface-container rounded-xl p-4 shadow-xl flex flex-col space-y-3.5">
+<div class="flex items-center space-x-3">
+<img class="w-12 h-12 rounded-full object-cover shadow-md shrink-0" data-alt="Retrato fotográfico institucional de alta resolución del Dr. Carlos Gutiérrez, un académico distinguido con anteojos, saco sastre de tweed oscuro e iluminación de estudio sobria en tonos cálidos umber, atmósfera editorial universitaria." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-53K37MBf7qmqmcKtdGo2W7Qk4jmt8u33bEIS53uxrbM2qg9RhE2DFlH4tDUpOdBDVIHbRkA6pLYRGXcBdyUkb6V6_ONePpPmeNZZhAaU0iCJ0XDxjOW5-pKwzlXBYoYYVoc-d0SWfgU6c5PpEXfZStox2z_H7Am5J4MIz3qWwGeYO6R_rlyQ52490Jp5Th3OanBNjSFnUqMWXJtRGnu2lBCdPYMP091ukp5Z"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-sm text-title-sm text-on-surface truncate">Dr. Carlos Gutiérrez</h4>
+<p class="font-label-sm text-label-sm text-tertiary truncate">Director de Tesis Asignado</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant/80">Comité Doctoral de Economía &amp; Empresa</span>
+</div>
+</div>
+<!-- Dictamen Comentario -->
+<div class="bg-surface-container-low p-3 rounded-lg text-on-surface-variant">
+<p class="font-body-sm text-body-sm italic leading-relaxed">
+        “La formulación del problema y el marco epistemológico de economía circular demuestran alta solidez. Procedo con la recomendación favorable tras suscripción.”
+      </p>
+</div>
+<!-- Botones de Acción Rápida -->
+<div class="grid grid-cols-1 gap-2 pt-1">
+<button class="w-full bg-primary-container hover:bg-inverse-primary text-on-primary font-label-md text-label-md py-2.5 px-4 rounded-lg shadow-md flex items-center justify-center gap-2 transition-all active:scale-[0.98]" id="btnApprove">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Aprobar y Habilitar Ruta</span>
+</button>
+<button class="w-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors active:scale-[0.98]" id="btnRequestChanges">
+<span class="material-symbols-outlined text-[18px] text-tertiary">edit_note</span>
+<span>Solicitar Ajustes Menores</span>
+</button>
+</div>
+</div>
+<!-- Repositorio de Documentos & Descarga Rápida -->
+<div class="bg-surface-container-low rounded-xl p-4 shadow-xl flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">folder_open</span>
+<span class="font-title-sm text-title-sm text-on-surface">Expediente Documental</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Versión 1.2</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container p-3 rounded-lg">
+<div class="flex items-center space-x-3 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-error-container/20 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-sm text-on-surface font-semibold truncate">Acta_Acuerdos_v1.2.pdf</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">2.4 MB · Sellado con huella digital SHA-256</span>
+</div>
+</div>
+<button aria-label="Descargar Acta PDF" class="w-9 h-9 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary flex items-center justify-center shrink-0 transition-transform active:scale-95 ml-2" id="btnDownload">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const btnSign = document.getElementById('btnSign');
+    const btnApprove = document.getElementById('btnApprove');
+    const btnDownload = document.getElementById('btnDownload');
+    const btnRequestChanges = document.getElementById('btnRequestChanges');
+
+    if (btnSign) {
+      btnSign.addEventListener('click', function() {
+        this.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> Firmando con certificado...';
+        this.classList.add('opacity-80', 'pointer-events-none');
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span> Acta Digital Suscrita';
+          this.classList.remove('bg-primary-container', 'opacity-80');
+          this.classList.add('bg-secondary-container', 'text-on-secondary');
+        }, 900);
+      });
+    }
+
+    if (btnApprove) {
+      btnApprove.addEventListener('click', function() {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-pulse">lock</span> Habilitando Fase C02...';
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> Ruta Habilitada con Éxito';
+          this.classList.remove('bg-primary-container');
+          this.classList.add('bg-secondary-container', 'text-on-secondary');
+        }, 800);
+      });
+    }
+
+    if (btnDownload) {
+      btnDownload.addEventListener('click', function() {
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary">check</span>';
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[20px]">download</span>';
+        }, 1500);
+      });
+    }
+
+    if (btnRequestChanges) {
+      btnRequestChanges.addEventListener('click', function() {
+        alert('Abriendo canal directo de observaciones con la doctoranda...');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.35)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-1"><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 transition-colors group text-primary font-semibold" data-path="acuerdos" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">edit_document</span><span class="font-label-sm text-[10px] tracking-tight truncate">Acuerdos</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="ruta-academica" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">alt_route</span><span class="font-label-sm text-[10px] tracking-tight truncate">Ruta</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="mi-tesis" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">menu_book</span><span class="font-label-sm text-[10px] tracking-tight truncate">Mi Tesis</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="cohorte" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">groups</span><span class="font-label-sm text-[10px] tracking-tight truncate">Cohorte</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="perfil-investigador" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">person</span><span class="font-label-sm text-[10px] tracking-tight truncate">Perfil</span></a></div></nav></body></html>

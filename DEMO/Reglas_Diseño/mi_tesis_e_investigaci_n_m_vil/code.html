@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#151311;color:#e7e1de;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#e7e1de","inverse-surface":"#e7e1de","error":"#ffb4ab","surface":"#151311","on-tertiary-fixed-variant":"#5d4200","on-secondary":"#073820","on-primary":"#5e1600","secondary-fixed-dim":"#a1d2af","inverse-primary":"#9d4225","inverse-on-surface":"#32302e","background":"#151311","outline":"#a48b84","on-primary-fixed-variant":"#7e2b10","surface-dim":"#151311","surface-container-highest":"#373432","outline-variant":"#56423d","on-secondary-container":"#93c3a2","on-primary-container":"#531200","tertiary-fixed-dim":"#eec067","surface-container-low":"#1d1b19","surface-variant":"#373432","on-surface-variant":"#dcc1b9","on-tertiary":"#412d00","on-secondary-fixed-variant":"#224f35","primary-fixed":"#ffdbd1","secondary-fixed":"#bceecb","primary-container":"#dd7252","surface-container-high":"#2c2a27","primary-fixed-dim":"#ffb59f","surface-container":"#211f1d","surface-bright":"#3b3936","on-tertiary-container":"#382700","surface-tint":"#ffb59f","on-surface":"#e7e1de","on-tertiary-fixed":"#261900","tertiary":"#eec067","error-container":"#93000a","tertiary-container":"#b38a37","tertiary-fixed":"#ffdea4","secondary-container":"#255237","on-secondary-fixed":"#002110","surface-container-lowest":"#100e0c","secondary":"#a1d2af","on-error":"#690005","primary":"#ffb59f","on-error-container":"#ffdad6","on-primary-fixed":"#3a0a00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","margin-mobile":"1.25rem","margin":"3rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2.5rem"},fontFamily:{"label-md":["Manrope"],"headline-md":["Newsreader"],"body-lg":["Newsreader"],"title-sm":["Manrope"],"body-md":["Manrope"],"headline-lg-mobile":["Newsreader"],"headline-sm":["Newsreader"],"body-sm":["Manrope"],"headline-xl-mobile":["Newsreader"],"headline-lg":["Newsreader"],"headline-xl":["Newsreader"],"title-md":["Manrope"],"label-sm":["Manrope"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"30px","fontWeight":"400"}],"title-sm":["15px",{"lineHeight":"22px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="text-primary font-headline-sm text-headline-sm italic leading-none">Posgrados &amp; Inv.</span><span class="text-outline/40 text-[10px]">•</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant/80 truncate">Plataforma Académica</span></div><div class="flex items-center gap-space-xs mt-0.5"><button class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors py-0.5 max-w-[200px]"><span class="font-label-md text-label-md text-secondary truncate">Cohorte 2024-II · Doctorado</span><span class="material-symbols-outlined text-[14px] text-secondary">expand_more</span></button></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificaciones académicas" class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-8 space-y-4">
+<!-- Saludo & Metadata Académica Principal -->
+<section class="flex flex-col space-y-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+        Investigador Predoctoral
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded-full">
+        ID: TES-8842-BIO
+      </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-tight">
+        Bienvenido de vuelta, Mateo
+      </h2>
+<p class="font-body-md text-body-md text-primary font-medium mt-1 leading-snug">
+        Modelos Semánticos en Biociencias &amp; Extracción Genómica
+      </p>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">school</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="font-label-md text-label-md text-on-surface-variant">Tutor Director:</span>
+<span class="font-label-md text-label-md text-on-surface underline decoration-outline-variant underline-offset-2">Dr. Aurelio Gutiérrez</span>
+</div>
+</div>
+</section>
+<!-- Tarjeta Destacada: Próximo Compromiso Clave (C09) -->
+<section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest p-space-md shadow-md">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
+<div class="flex flex-col space-y-3 relative z-10">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded bg-primary-container/20 text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+          Próximo Compromiso Clave (C09)
+        </span>
+<span class="font-label-md text-label-md text-tertiary font-bold bg-surface-container-highest px-2 py-0.5 rounded-full">
+          11 días hábiles
+        </span>
+</div>
+<div class="flex flex-col space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">
+          Hito Crítico: Entrega de Extracción Semántica y Protocolo Bio-ontológico
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 pt-1">
+<span class="material-symbols-outlined text-[15px] text-outline">event_available</span>
+          Fecha límite oficial: <strong class="text-on-surface font-semibold ml-0.5">22 de Abril, 2026</strong>
+</p>
+</div>
+<div class="pt-1 flex items-center gap-2">
+<button class="w-full bg-primary-container hover:bg-primary-container/90 text-on-primary font-title-sm text-title-sm py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-sm" id="btn-dep-evidencia">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+          Depositar Evidencia
+        </button>
+</div>
+</div>
+</section>
+<!-- Grid 2 Métricas Compactas -->
+<section class="grid grid-cols-2 gap-space-sm">
+<!-- Métrica 1 -->
+<div class="bg-surface-container rounded-xl p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Ruta Tesis</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Fase 2 de 6</span>
+</div>
+<div class="my-2 flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface leading-none">35%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">completado</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 35%;"></div>
+</div>
+</div>
+<!-- Métrica 2 -->
+<div class="bg-surface-container rounded-xl p-3 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Ritmo Global</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/40 text-on-secondary-container px-1.5 py-0.5 rounded font-medium">+12 días</span>
+</div>
+<div class="my-1 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface leading-tight">Anticipado</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">vs cronograma</span>
+</div>
+<!-- Sparkline SVG -->
+<svg class="w-16 h-8 text-secondary overflow-visible" fill="none" viewbox="0 0 64 24">
+<path d="M2 18 Q 16 19 24 14 T 44 9 T 62 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<circle class="fill-secondary" cx="62" cy="4" r="2.5"></circle>
+</svg>
+</div>
+<span class="font-label-sm text-[10px] text-outline truncate">Semestre en curso: Alta cadencia</span>
+</div>
+</section>
+<!-- Tarjeta Clara (Parchment Review Card): Micro-Tareas & Evidencias (C04) -->
+<section class="rounded-xl bg-[#faf8f5] text-[#1e1c1a] p-4 shadow-xl flex flex-col space-y-3">
+<div class="flex items-center justify-between border-b-0">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[19px] text-[#c05c3d]">checklist</span>
+<h3 class="font-title-md text-title-md font-bold tracking-tight text-[#1e1c1a]">
+          Micro-Tareas &amp; Evidencias (C04)
+        </h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase px-2 py-0.5 rounded bg-[#ebe5dc] text-[#5c544c] font-semibold">
+        2 / 4 Listas
+      </span>
+</div>
+<!-- Lista de Tareas Editorial -->
+<div class="flex flex-col space-y-2 pt-1" id="task-list">
+<!-- Tarea 1 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-[#f0eae1] transition-colors">
+<div class="mt-0.5 shrink-0 w-4 h-4 rounded bg-[#2d5a3f] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="font-body-sm text-body-sm font-medium text-[#1e1c1a] line-through opacity-75">
+            Normalización ontológica de vocabularios MeSH
+          </p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-[10px] text-[#2d5a3f] font-semibold uppercase tracking-wider">Aprobado y Revisado</span>
+<span class="text-[#8c8277] text-[10px]">• 14 Mar</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-[#2d5a3f]">verified</span>
+</div>
+<!-- Tarea 2 -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-[#f0eae1] transition-colors">
+<div class="mt-0.5 shrink-0 w-4 h-4 rounded bg-[#2d5a3f] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="font-body-sm text-body-sm font-medium text-[#1e1c1a] line-through opacity-75">
+            Extracción tabular de 14,200 abstracts PubMed
+          </p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-[10px] text-[#2d5a3f] font-semibold uppercase tracking-wider">Dataset Consignado</span>
+<span class="text-[#8c8277] text-[10px]">• 02 Abr</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-[#70685e]">folder_zip</span>
+</div>
+<!-- Tarea 3: Prioritaria / Pendiente -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-[#fff1ec] transition-colors">
+<div class="mt-0.5 shrink-0 w-4 h-4 rounded bg-transparent flex items-center justify-center text-transparent cursor-pointer hover:bg-[#c05c3d]/20">
+<span class="material-symbols-outlined text-[14px] text-[#c05c3d]">crop_square</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<p class="font-body-sm text-body-sm font-bold text-[#1e1c1a]">
+              Redacción del capítulo analítico de sesgos en LLMs
+            </p>
+<span class="font-label-sm text-[9px] uppercase px-1.5 py-0.2 rounded bg-[#c05c3d] text-white font-bold tracking-wider">
+              Prioritaria
+            </span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-[10px] text-[#c05c3d] font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">schedule</span> Plazo: 22 Abril
+            </span>
+<span class="text-[#8c8277] text-[10px]">• Cap. 3.4</span>
+</div>
+</div>
+<button class="text-[#c05c3d] hover:text-[#9e3f22] p-0.5">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+<!-- Tarea 4: Planificada -->
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-[#fbf9f6] transition-colors">
+<div class="mt-0.5 shrink-0 w-4 h-4 rounded bg-transparent flex items-center justify-center text-[#999083]">
+<span class="material-symbols-outlined text-[14px]">crop_square</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="font-body-sm text-body-sm text-[#47413a]">
+            Benchmarking comparativo con anotadores humanos
+          </p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-[10px] text-[#70685e] font-medium uppercase tracking-wider">Planificada para Mayo</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-[#b3a89a]">lock_clock</span>
+</div>
+</div>
+<!-- Botón Añadir Tarea -->
+<button class="w-full mt-1 bg-[#ede6dc] hover:bg-[#e2d8cb] text-[#2e2a27] font-title-sm text-title-sm py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-colors" id="btn-add-task">
+<span class="material-symbols-outlined text-[16px]">add_task</span>
+      + Nueva Tarea de Tesis
+    </button>
+</section>
+<!-- Tarjeta Clara: Revisión Tutorial Reciente -->
+<section class="rounded-xl bg-[#faf8f5] text-[#1e1c1a] p-4 shadow-xl flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-[#3d2f25] text-[#faf8f5] flex items-center justify-center font-headline-sm text-headline-sm font-semibold">
+          AG
+        </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-bold text-[#1e1c1a] leading-tight">Dr. Aurelio Gutiérrez</span>
+<span class="font-label-sm text-[10px] text-[#70685e]">Comentario de tutoría · Ayer 18:32</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] bg-[#dbe8dc] text-[#1c4d29] px-2 py-0.5 rounded-full font-semibold">
+        Revisión C05
+      </span>
+</div>
+<blockquote class="font-body-lg text-body-lg italic text-[#2e2a27] pl-3 py-1 bg-[#f4eee6] rounded-r-lg">
+      “Mateo, la taxonomía bioinformática del apartado 2.3 quedó muy pulida. Asegúrate de contrastar los F1-scores de extracción contra el baseline de BioBERT antes del comité del 22.”
+    </blockquote>
+<!-- Campo rápido para responder nota -->
+<div class="flex flex-col space-y-1.5 pt-1">
+<label class="font-label-sm text-label-sm text-[#70685e] font-semibold" for="tutor-reply-input">
+        Respuesta rápida al tutor
+      </label>
+<div class="flex items-center gap-1.5">
+<input class="flex-1 bg-[#f0eae1] text-[#1e1c1a] placeholder-[#8c8277] font-body-sm text-body-sm px-3 py-2 rounded-lg outline-none focus:bg-white transition-colors" id="tutor-reply-input" placeholder="Escribir aclaración o adjunto metodológico..." type="text"/>
+<button class="shrink-0 bg-[#c05c3d] hover:bg-[#ab5034] text-white p-2 rounded-lg flex items-center justify-center transition-transform active:scale-95" id="btn-send-reply">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<span class="font-label-sm text-[10px] text-[#2d5a3f] hidden font-medium" id="reply-feedback">Nota enviada al buzón del Dr. Gutiérrez</span>
+</div>
+</section>
+<!-- Tarjeta Oscura: Bitácora Conceptual (C11) -->
+<section class="rounded-xl bg-surface-container p-4 shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">auto_stories</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">
+          Bitácora Conceptual (C11)
+        </h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Folio #48</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      Registro vivo de descubrimientos colaterales, citas de lectura obligada o ajustes ontológicos imprevistos.
+    </p>
+<!-- Selector de Tipo en Pills Estilo Archival -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1" id="bitacora-pills">
+<button class="bitacora-pill px-2.5 py-1 rounded font-label-sm text-label-sm font-semibold bg-tertiary text-on-tertiary-container shrink-0 transition-colors" data-type="Hipótesis">
+        Hipótesis
+      </button>
+<button class="bitacora-pill px-2.5 py-1 rounded font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface-variant hover:text-on-surface shrink-0 transition-colors" data-type="Cita DOI">
+        Cita DOI
+      </button>
+<button class="bitacora-pill px-2.5 py-1 rounded font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface-variant hover:text-on-surface shrink-0 transition-colors" data-type="Idea metodológica">
+        Idea metodológica
+      </button>
+</div>
+<!-- Campo de Texto de la Entrada -->
+<div class="relative">
+<textarea class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline/70 font-body-sm text-body-sm p-3 rounded-lg resize-none outline-none focus:bg-surface-container-low transition-colors" id="bitacora-text" placeholder="Anotar hallazgo o derivación para la tesis..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+        Timestamp automático
+      </div>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-tertiary font-title-sm text-title-sm py-1.5 px-3.5 rounded-lg flex items-center gap-1.5 transition-colors active:scale-95" id="btn-save-bitacora">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+        Asentar en Bitácora
+      </button>
+</div>
+<div class="font-label-sm text-label-sm text-secondary hidden" id="bitacora-feedback">
+      ✓ Entrada archivada exitosamente en el compendio doctoral.
+    </div>
+</section>
+<!-- Zona de Carga de Documentos / Drag & Drop -->
+<section class="rounded-xl bg-surface-container-low p-4 shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">upload_file</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">
+          Depósito de Documentos &amp; Anexos
+        </h3>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">PDF, TeX, CSV</span>
+</div>
+<!-- Dropzone interactiva -->
+<div class="rounded-xl bg-surface-container/70 p-5 flex flex-col items-center justify-center text-center space-y-2 cursor-pointer transition-all hover:bg-surface-container" id="dropzone-area">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">drive_folder_upload</span>
+</div>
+<div class="flex flex-col">
+<p class="font-title-sm text-title-sm text-on-surface font-semibold">
+          Arrastra manuscritos o scripts aquí
+        </p>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">
+          Archivado bajo norma de preservación institucional (máx. 45 MB)
+        </p>
+</div>
+<input class="hidden" id="thesis-file-input" multiple="" type="file"/>
+<button class="mt-1 bg-surface-container-highest hover:bg-surface-bright text-on-surface font-title-sm text-title-sm py-1.5 px-4 rounded-lg flex items-center gap-1.5 transition-colors active:scale-95" id="btn-trigger-file" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">attachment</span>
+        Seleccionar desde el dispositivo
+      </button>
+</div>
+<!-- Archivo recientemente cargado / Feedback interactivo -->
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between" id="file-feedback-card">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">task_alt</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">borrador_capitulo3_rev2.pdf</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">SHA-256 verificado · 4.2 MB</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] text-secondary font-mono bg-secondary-container/30 px-2 py-0.5 rounded">
+        Indexado
+      </span>
+</div>
+</section>
+</div>
+<script>
+  (function initResearchDashboard() {
+    // Interacción Selector de Bitácora
+    const pills = document.querySelectorAll('.bitacora-pill');
+    let selectedType = 'Hipótesis';
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-tertiary', 'text-on-tertiary-container', 'font-semibold');
+          p.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'font-medium');
+        });
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'font-medium');
+        pill.classList.add('bg-tertiary', 'text-on-tertiary-container', 'font-semibold');
+        selectedType = pill.getAttribute('data-type');
+      });
+    });
+
+    // Guardado de Bitácora
+    const btnSaveBitacora = document.getElementById('btn-save-bitacora');
+    const bitacoraText = document.getElementById('bitacora-text');
+    const bitacoraFeedback = document.getElementById('bitacora-feedback');
+
+    if (btnSaveBitacora && bitacoraText) {
+      btnSaveBitacora.addEventListener('click', () => {
+        if (bitacoraText.value.trim() !== '') {
+          bitacoraFeedback.textContent = `✓ [${selectedType}] anotado en compendio doctoral.`;
+          bitacoraFeedback.classList.remove('hidden');
+          bitacoraText.value = '';
+          setTimeout(() => {
+            bitacoraFeedback.classList.add('hidden');
+          }, 3500);
+        } else {
+          bitacoraText.focus();
+        }
+      });
+    }
+
+    // Respuesta a Tutor
+    const btnSendReply = document.getElementById('btn-send-reply');
+    const replyInput = document.getElementById('tutor-reply-input');
+    const replyFeedback = document.getElementById('reply-feedback');
+
+    if (btnSendReply && replyInput) {
+      btnSendReply.addEventListener('click', () => {
+        if (replyInput.value.trim() !== '') {
+          replyFeedback.classList.remove('hidden');
+          replyInput.value = '';
+          setTimeout(() => {
+            replyFeedback.classList.add('hidden');
+          }, 3000);
+        }
+      });
+    }
+
+    // Input File trigger
+    const dropzone = document.getElementById('dropzone-area');
+    const fileInput = document.getElementById('thesis-file-input');
+    const btnFile = document.getElementById('btn-trigger-file');
+    const fileCard = document.getElementById('file-feedback-card');
+
+    if (btnFile && fileInput) {
+      btnFile.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+      });
+    }
+
+    if (dropzone && fileInput) {
+      dropzone.addEventListener('click', () => fileInput.click());
+
+      fileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+          const file = e.target.files[0];
+          const nameSpan = fileCard.querySelector('.font-label-md');
+          const sizeSpan = fileCard.querySelector('.font-label-sm.text-on-surface-variant');
+          if (nameSpan) nameSpan.textContent = file.name;
+          if (sizeSpan) sizeSpan.textContent = `Recién cargado · ${(file.size / 1024 / 1024).toFixed(2)} MB`;
+        }
+      });
+    }
+
+    // Botón Depositar Evidencia directo
+    const btnEvidencia = document.getElementById('btn-dep-evidencia');
+    if (btnEvidencia && dropzone) {
+      btnEvidencia.addEventListener('click', () => {
+        dropzone.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        dropzone.classList.add('bg-surface-container-high');
+        setTimeout(() => dropzone.classList.remove('bg-surface-container-high'), 1000);
+      });
+    }
+
+    // Botón + Nueva Tarea
+    const btnAddTask = document.getElementById('btn-add-task');
+    const taskList = document.getElementById('task-list');
+    if (btnAddTask && taskList) {
+      btnAddTask.addEventListener('click', () => {
+        const newTask = document.createElement('div');
+        newTask.className = 'flex items-start gap-2.5 p-2.5 rounded-lg bg-[#fff1ec] transition-colors';
+        newTask.innerHTML = `
+          <div class="mt-0.5 shrink-0 w-4 h-4 rounded bg-transparent flex items-center justify-center text-[#c05c3d]">
+            <span class="material-symbols-outlined text-[14px]">crop_square</span>
+          </div>
+          <div class="flex flex-col flex-1 min-w-0">
+            <p class="font-body-sm text-body-sm font-semibold text-[#1e1c1a]">Nueva Tarea Investigativa</p>
+            <span class="font-label-sm text-[10px] text-[#c05c3d]">Asignada hoy · Pendiente</span>
+          </div>
+        `;
+        taskList.appendChild(newTask);
+        btnAddTask.textContent = 'Tarea Añadida';
+        setTimeout(() => {
+          btnAddTask.innerHTML = '<span class="material-symbols-outlined text-[16px]">add_task</span> + Nueva Tarea de Tesis';
+        }, 1500);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.35)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="acuerdos" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">edit_document</span><span class="font-label-sm text-[10px] tracking-tight truncate">Acuerdos</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="ruta-academica" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">alt_route</span><span class="font-label-sm text-[10px] tracking-tight truncate">Ruta</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 transition-colors group text-primary font-semibold" data-path="mi-tesis" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">menu_book</span><span class="font-label-sm text-[10px] tracking-tight truncate">Mi Tesis</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="cohorte" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">groups</span><span class="font-label-sm text-[10px] tracking-tight truncate">Cohorte</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="perfil-investigador" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">person</span><span class="font-label-sm text-[10px] tracking-tight truncate">Perfil</span></a></div></nav></body></html>
