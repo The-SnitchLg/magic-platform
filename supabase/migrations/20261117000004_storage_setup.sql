@@ -22,44 +22,43 @@ ON CONFLICT (id) DO UPDATE SET
   public = false,
   file_size_limit = 52428800;
 
--- 2. Storage RLS Policies
--- Enable RLS on storage.objects
-ALTER TABLE storage.objects ENABLE ROW LEVEL SECURITY;
+-- 2. Storage RLS Policies (storage.objects has RLS enabled by default)
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'academic_evidence_upload' AND tablename = 'objects' AND schemaname = 'storage') THEN
+    CREATE POLICY "academic_evidence_upload" ON storage.objects
+      FOR INSERT
+      WITH CHECK (
+        bucket_id = 'academic-evidence'
+        AND auth.role() = 'authenticated'
+        AND (
+          public.is_student_of_project((storage.foldername(name))[1]::uuid)
+          OR public.is_tutor_of_project((storage.foldername(name))[1]::uuid)
+          OR public.is_admin()
+        )
+      );
+  END IF;
 
--- Upload policy: Authenticated student can upload evidence to their project folder
-DROP POLICY IF EXISTS "academic_evidence_upload" ON storage.objects;
-CREATE POLICY "academic_evidence_upload" ON storage.objects
-  FOR INSERT
-  WITH CHECK (
-    bucket_id = 'academic-evidence'
-    AND auth.role() = 'authenticated'
-    -- The first path segment is the project_id; verify student or tutor ownership
-    AND (
-      public.is_student_of_project((storage.foldername(name))[1]::uuid)
-      OR public.is_tutor_of_project((storage.foldername(name))[1]::uuid)
-      OR public.is_admin()
-    )
-  );
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'academic_evidence_download' AND tablename = 'objects' AND schemaname = 'storage') THEN
+    CREATE POLICY "academic_evidence_download" ON storage.objects
+      FOR SELECT
+      USING (
+        bucket_id = 'academic-evidence'
+        AND auth.role() = 'authenticated'
+        AND (
+          public.is_student_of_project((storage.foldername(name))[1]::uuid)
+          OR public.is_tutor_of_project((storage.foldername(name))[1]::uuid)
+          OR public.is_admin()
+        )
+      );
+  END IF;
 
--- Select policy: Student titular, assigned tutor or admin can read/download evidence
-DROP POLICY IF EXISTS "academic_evidence_download" ON storage.objects;
-CREATE POLICY "academic_evidence_download" ON storage.objects
-  FOR SELECT
-  USING (
-    bucket_id = 'academic-evidence'
-    AND auth.role() = 'authenticated'
-    AND (
-      public.is_student_of_project((storage.foldername(name))[1]::uuid)
-      OR public.is_tutor_of_project((storage.foldername(name))[1]::uuid)
-      OR public.is_admin()
-    )
-  );
-
--- Delete policy: Only admin or tutor can prune invalid objects
-DROP POLICY IF EXISTS "academic_evidence_delete" ON storage.objects;
-CREATE POLICY "academic_evidence_delete" ON storage.objects
-  FOR DELETE
-  USING (
-    bucket_id = 'academic-evidence'
-    AND public.is_admin()
-  );
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'academic_evidence_delete' AND tablename = 'objects' AND schemaname = 'storage') THEN
+    CREATE POLICY "academic_evidence_delete" ON storage.objects
+      FOR DELETE
+      USING (
+        bucket_id = 'academic-evidence'
+        AND public.is_admin()
+      );
+  END IF;
+END $$;
