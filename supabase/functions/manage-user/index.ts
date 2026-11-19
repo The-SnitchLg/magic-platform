@@ -3,7 +3,6 @@
 // Protected User Provisioning & Role Management
 // ==============================================================================
 
-import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.0';
 
 const corsHeaders = {
@@ -11,7 +10,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-serve(async (req) => {
+Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
   }
@@ -114,6 +113,10 @@ serve(async (req) => {
         user_metadata: {
           full_name: fullName || email.split('@')[0],
         },
+        app_metadata: {
+          role: targetRole,
+          must_change_password: true
+        }
       });
 
       if (createError) {
@@ -123,16 +126,18 @@ serve(async (req) => {
         });
       }
 
-      // Set profile role to targetRole
+      // Ensure profile role is targetRole
       await adminClient
         .from('profiles')
-        .update({
+        .upsert({
+          id: newUserData.user.id,
+          email_display: email,
           role: targetRole,
           display_name: fullName || email.split('@')[0],
+          active: true,
           must_change_password: true,
           updated_at: new Date().toISOString(),
-        })
-        .eq('id', newUserData.user.id);
+        });
 
       // Audit log
       await adminClient.from('audit_events').insert({
@@ -165,53 +170,18 @@ serve(async (req) => {
         });
       }
 
-      const { data: targetProfile } = await adminClient
-        .from('profiles')
-        .select('role, active')
-        .eq('id', targetUserId)
-        .single();
+      const { data: result, error: rpcError } = await adminClient.rpc('admin_toggle_user_active', {
+        p_target_id: targetUserId
+      });
 
-      if (!targetProfile) {
-        return new Response(JSON.stringify({ error: 'Usuario no encontrado' }), {
-          status: 404,
+      if (rpcError) {
+        return new Response(JSON.stringify({ error: rpcError.message }), {
+          status: 400,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
 
-      // Prevent deactivating last admin
-      if (targetProfile.role === 'admin' && targetProfile.active) {
-        const { count } = await adminClient
-          .from('profiles')
-          .select('*', { count: 'exact', head: true })
-          .eq('role', 'admin')
-          .eq('active', true);
-
-        if ((count || 0) <= 1) {
-          return new Response(JSON.stringify({ error: 'No es posible desactivar al único administrador activo' }), {
-            status: 400,
-            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-          });
-        }
-      }
-
-      const newActive = !targetProfile.active;
-      await adminClient
-        .from('profiles')
-        .update({ active: newActive, updated_at: new Date().toISOString() })
-        .eq('id', targetUserId);
-
-      await adminClient.from('audit_events').insert({
-        actor_id: user.id,
-        event_type: newActive ? 'USER_ACTIVATED' : 'USER_DEACTIVATED',
-        entity: 'profiles',
-        entity_id: targetUserId,
-        safe_metadata: { timestamp: new Date().toISOString() }
-      });
-
-      return new Response(JSON.stringify({
-        success: true,
-        active: newActive
-      }), {
+      return new Response(JSON.stringify(result), {
         status: 200,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
@@ -222,7 +192,8 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(JSON.stringify({ error: 'Error interno del servidor' }), {
+    const errorMsg = err instanceof Error ? err.message : 'Error interno del servidor';
+    return new Response(JSON.stringify({ error: errorMsg }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
