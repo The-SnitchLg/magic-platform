@@ -31,12 +31,22 @@ describe('RBAC & Role Transition Governance', () => {
       { id: 'admin-1', role: 'admin', active: true }
     ];
 
-    const canDeactivateAdmin = (targetId: string) => {
-      const remainingAdmins = activeAdmins.filter(a => a.id !== targetId && a.active);
-      return remainingAdmins.length > 0;
+    const canDeactivateOrDemoteAdmin = (targetId: string, newRole?: AppRole, newActive?: boolean) => {
+      const target = activeAdmins.find(a => a.id === targetId);
+      if (!target || target.role !== 'admin') return true;
+
+      const isDemotion = newRole && newRole !== 'admin';
+      const isDeactivation = newActive === false;
+
+      if (isDemotion || isDeactivation) {
+        const remainingActiveAdmins = activeAdmins.filter(a => a.id !== targetId && a.active);
+        return remainingActiveAdmins.length >= 1;
+      }
+      return true;
     };
 
-    expect(canDeactivateAdmin('admin-1')).toBe(false);
+    expect(canDeactivateOrDemoteAdmin('admin-1', 'student', true)).toBe(false);
+    expect(canDeactivateOrDemoteAdmin('admin-1', 'admin', false)).toBe(false);
   });
 
   it('guarantees that administrator supervision mode is strictly read-only', () => {
@@ -50,5 +60,40 @@ describe('RBAC & Role Transition Governance', () => {
 
     expect(isSupervising).toBe(true);
     expect(canSignOrApprove).toBe(false);
+  });
+
+  it('validates supported roles constraint (student, tutor, admin)', () => {
+    const validRoles: AppRole[] = ['student', 'tutor', 'admin'];
+    const isValidRole = (role: string): role is AppRole => validRoles.includes(role as AppRole);
+
+    expect(isValidRole('student')).toBe(true);
+    expect(isValidRole('tutor')).toBe(true);
+    expect(isValidRole('admin')).toBe(true);
+    expect(isValidRole('superadmin')).toBe(false);
+    expect(isValidRole('guest')).toBe(false);
+  });
+
+  it('safely reconciles auth users with missing profiles without data clobbering', () => {
+    const existingProfiles = new Map([
+      ['user-1', { id: 'user-1', email: 'test@universidad.edu', role: 'admin' as AppRole }]
+    ]);
+
+    const authUsers = [
+      { id: 'user-1', email: 'test@universidad.edu' },
+      { id: 'user-2', email: 'student2@universidad.edu' },
+    ];
+
+    // Reconciliation logic
+    authUsers.forEach(au => {
+      if (!existingProfiles.has(au.id)) {
+        existingProfiles.set(au.id, { id: au.id, email: au.email, role: 'student' });
+      }
+    });
+
+    expect(existingProfiles.size).toBe(2);
+    // User 1 preserved existing role
+    expect(existingProfiles.get('user-1')?.role).toBe('admin');
+    // User 2 safely added with default student role
+    expect(existingProfiles.get('user-2')?.role).toBe('student');
   });
 });
