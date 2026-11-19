@@ -52,7 +52,9 @@ El sistema implementa el lenguaje visual **Academic Editorial Architecture**:
    - Dictamina entregables de evidencias y habilita compuertas metodológicas.
 3. **Administrador Institucional (`admin`)**:
    - Control total de usuarios, provisión de tutores con clave temporal o invitación y promoción de perfiles sin duplicar cuentas.
-   - Asignación formal de tutores por proyecto con trazabilidad histórica.
+   - Sincronización autoritativa directa con Supabase (`admin_promote_user`, `admin_toggle_user_active`, `manage-user` Edge Function).
+   - Invariante de seguridad: Prohibición a nivel de base de datos (`trg_protect_last_admin`) de revocar o desactivar al último administrador activo.
+   - Asignación formal de tutores por proyecto con trazabilidad histórica (`admin_assign_tutor`).
    - **Selector de 3 Experiencias (`AdminViewSwitcher`)**: Permite inspeccionar la vista de estudiante o tutor con banner permanente de **Solo Lectura** (`ReadOnlySupervisionBanner`) para prevenir suplantación.
 
 ---

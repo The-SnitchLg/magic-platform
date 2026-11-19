@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
+import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import {
   AlertCircle,
   Clock,
@@ -10,9 +11,22 @@ import {
 
 export const StudentWorkspace: React.FC = () => {
   const { profile } = useAuth();
+  const [project, setProject] = useState<{ id: string; title: string; tutor_id: string | null } | null>(null);
+
+  useEffect(() => {
+    if (!isSupabaseConfigured() || !profile) return;
+    supabase
+      .from('research_projects')
+      .select('id, title, tutor_id')
+      .eq('student_id', profile.id)
+      .maybeSingle()
+      .then(({ data }) => {
+        if (data) setProject(data);
+      });
+  }, [profile]);
   
   // State representation for the student dossier
-  const [hasTutor] = useState(true); // Can be toggled or fetched from Supabase
+  const hasTutor = isSupabaseConfigured() && profile?.role === 'student' ? Boolean(project?.tutor_id) : true;
   const [agreementStatus] = useState<'draft' | 'submitted' | 'approved'>('submitted');
   const [hasPublishedRoute] = useState(true);
 

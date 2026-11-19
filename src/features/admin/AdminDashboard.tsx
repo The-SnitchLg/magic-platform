@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import {
   Users,
   ShieldCheck,
@@ -7,20 +8,88 @@ import {
   ArrowRight,
   BookOpen,
   Activity,
-  AlertCircle
+  AlertCircle,
+  RefreshCw,
+  Loader2
 } from 'lucide-react';
 
 export const AdminDashboard: React.FC = () => {
-
-  const [stats] = useState({
-    totalUsers: 18,
-    studentsCount: 12,
-    tutorsCount: 4,
-    adminsCount: 2,
-    activeProjects: 12,
-    pendingAssignments: 1,
-    auditEventsCount: 48,
+  const [stats, setStats] = useState({
+    totalUsers: 0,
+    studentsCount: 0,
+    tutorsCount: 0,
+    adminsCount: 0,
+    activeProjects: 0,
+    pendingAssignments: 0,
+    auditEventsCount: 0,
   });
+  const [loading, setLoading] = useState(true);
+
+  const fetchStats = async () => {
+    setLoading(true);
+    try {
+      if (!isSupabaseConfigured()) {
+        setStats({
+          totalUsers: 5,
+          studentsCount: 2,
+          tutorsCount: 2,
+          adminsCount: 1,
+          activeProjects: 2,
+          pendingAssignments: 1,
+          auditEventsCount: 6,
+        });
+        setLoading(false);
+        return;
+      }
+
+      // Fetch profiles counts
+      const { data: profiles, error: pError } = await supabase
+        .from('profiles')
+        .select('role, active');
+
+      if (pError) throw pError;
+
+      const totalUsers = profiles?.length || 0;
+      const studentsCount = profiles?.filter((p) => p.role === 'student').length || 0;
+      const tutorsCount = profiles?.filter((p) => p.role === 'tutor').length || 0;
+      const adminsCount = profiles?.filter((p) => p.role === 'admin').length || 0;
+
+      // Fetch research projects counts
+      const { data: projects, error: projError } = await supabase
+        .from('research_projects')
+        .select('id, status, tutor_id');
+
+      if (projError) throw projError;
+
+      const activeProjects = projects?.filter((p) => p.status !== 'awaiting_tutor').length || 0;
+      const pendingAssignments = projects?.filter((p) => !p.tutor_id).length || 0;
+
+      // Fetch audit count
+      const { count: auditEventsCount, error: auditError } = await supabase
+        .from('audit_events')
+        .select('*', { count: 'exact', head: true });
+
+      if (auditError) throw auditError;
+
+      setStats({
+        totalUsers,
+        studentsCount,
+        tutorsCount,
+        adminsCount,
+        activeProjects,
+        pendingAssignments,
+        auditEventsCount: auditEventsCount || 0,
+      });
+    } catch (err) {
+      console.warn('Error loading dashboard stats:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchStats();
+  }, []);
 
   return (
     <div className="space-y-8">
@@ -41,6 +110,16 @@ export const AdminDashboard: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={fetchStats}
+            disabled={loading}
+            className="px-3 py-2 bg-[#252220] hover:bg-[#373432] text-[#dcc1b9] text-xs font-semibold rounded border border-[#373432] transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin text-[#c05c3d]' : ''}`} />
+            <span>Actualizar</span>
+          </button>
+
           <Link
             to="/administracion/usuarios"
             className="px-4 py-2 bg-[#c05c3d] hover:bg-[#ab5034] text-white text-xs font-semibold rounded shadow transition-all flex items-center gap-1.5"
@@ -62,10 +141,10 @@ export const AdminDashboard: React.FC = () => {
           </div>
           <div className="mt-2">
             <span className="font-serif text-3xl font-bold text-[#faf8f5]">
-              {stats.totalUsers}
+              {loading ? <Loader2 className="w-6 h-6 animate-spin text-[#c05c3d]" /> : stats.totalUsers}
             </span>
             <span className="text-xs text-[#a48b84] block mt-0.5">
-              {stats.studentsCount} estudiantes • {stats.tutorsCount} tutores
+              {stats.studentsCount} estudiantes • {stats.tutorsCount} tutores • {stats.adminsCount} admin
             </span>
           </div>
         </div>
@@ -73,16 +152,16 @@ export const AdminDashboard: React.FC = () => {
         <div className="bg-[#211f1d] border border-[#2c2a27] rounded-xl p-5 flex flex-col justify-between shadow">
           <div className="flex items-start justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-[#a48b84]">
-              Expedientes Activos
+              Expedientes Vinculados
             </span>
             <BookOpen className="w-4 h-4 text-[#8cb89f]" />
           </div>
           <div className="mt-2">
             <span className="font-serif text-3xl font-bold text-[#faf8f5]">
-              {stats.activeProjects}
+              {loading ? <Loader2 className="w-6 h-6 animate-spin text-[#8cb89f]" /> : stats.activeProjects}
             </span>
             <span className="text-xs text-[#8cb89f] block mt-0.5">
-              En seguimiento continuo
+              En seguimiento académico activo
             </span>
           </div>
         </div>
@@ -96,7 +175,7 @@ export const AdminDashboard: React.FC = () => {
           </div>
           <div className="mt-2">
             <span className="font-serif text-3xl font-bold text-[#dfbe76]">
-              {stats.pendingAssignments}
+              {loading ? <Loader2 className="w-6 h-6 animate-spin text-[#dfbe76]" /> : stats.pendingAssignments}
             </span>
             <Link
               to="/administracion/asignaciones"
@@ -116,10 +195,10 @@ export const AdminDashboard: React.FC = () => {
           </div>
           <div className="mt-2">
             <span className="font-serif text-3xl font-bold text-[#faf8f5]">
-              {stats.auditEventsCount}
+              {loading ? <Loader2 className="w-6 h-6 animate-spin text-[#a48b84]" /> : stats.auditEventsCount}
             </span>
             <span className="text-xs text-[#a48b84] block mt-0.5">
-              Eventos inmutables registrados
+              Eventos inmutables en Supabase
             </span>
           </div>
         </div>
