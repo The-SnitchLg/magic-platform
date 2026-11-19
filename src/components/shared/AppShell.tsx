@@ -144,7 +144,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
                   MAGIC
                 </span>
                 <span className="text-[11px] uppercase tracking-wider text-[#a48b84] block font-sans">
-                  Seguimiento Doctoral
+                  Seguimiento Académico
                 </span>
               </div>
             </div>

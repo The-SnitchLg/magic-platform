@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-describe('Security & Confidentiality Scanner Verification', () => {
+describe('Security, Confidentiality & Terminology Scanner Verification', () => {
   it('confirms .gitignore excludes environment files and secret keys', () => {
     const gitignorePath = join(process.cwd(), '.gitignore');
     expect(existsSync(gitignorePath)).toBe(true);
@@ -30,5 +30,36 @@ describe('Security & Confidentiality Scanner Verification', () => {
     expect(content).toContain('process.env.BOOTSTRAP_ADMIN_EMAIL');
     expect(content).toContain('process.env.BOOTSTRAP_ADMIN_PASSWORD');
     expect(content).not.toMatch(/ADMIN_PASSWORD\s*=\s*['"][^'"]+['"]/);
+  });
+
+  it('strictly ensures zero occurrences of "Seguimiento Doctoral" exist in source code', () => {
+    const srcDir = join(process.cwd(), 'src');
+    
+    function scanDirectory(dir: string): string[] {
+      let files: string[] = [];
+      const entries = readdirSync(dir);
+      for (const entry of entries) {
+        const fullPath = join(dir, entry);
+        const stat = statSync(fullPath);
+        if (stat.isDirectory()) {
+          files = files.concat(scanDirectory(fullPath));
+        } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts')) {
+          files.push(fullPath);
+        }
+      }
+      return files;
+    }
+
+    const sourceFiles = scanDirectory(srcDir);
+    const violations: string[] = [];
+
+    for (const file of sourceFiles) {
+      const content = readFileSync(file, 'utf-8');
+      if (/seguimiento\s+doctoral/i.test(content)) {
+        violations.push(file);
+      }
+    }
+
+    expect(violations).toEqual([]);
   });
 });
